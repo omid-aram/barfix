@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="theme-color" content="#FF0000" />
+    <meta name="msapplication-navbutton-color" content="#FF0000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000" />
+
+    <title>Barfix Sample Page</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="barfix.css" />
+
+    <script type="text/javascript" src="barfix.js"></script>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+
+    <style>
+        body {
+            padding: 12px;
+        }
+
+        div {
+            border: 1px solid silver;
+            padding: 21px;
+        }
+
+        code {
+            display: block;
+            position: relative;
+            padding: 3px;
+            z-index: 10;
+            height: 0;
+            top: 6px;
+            white-space: nowrap;
+            color: rgba(0, 0, 0, 0.7);
+            direction: ltr;
+        }
+
+        p,
+        .margin-bottom-20 {
+            margin-bottom: 20px;
+        }
+
+        .bx-float {
+            background-color: whitesmoke;
+        }
+
+        .bx-float>div {
+            background-color: #e2d9f3;
+            border-color: #c5b3e6;
+        }
+
+        .bx-table {
+            background-color: whitesmoke;
+        }
+
+        .bx-table>div {
+            background-color: #d1e7dd;
+            border-color: #a3cfbb;
+        }
+
+        .bx-table code,
+        .bx-float code {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body class="bx-xxl-paper bx-ltr">
+    <h1>Barfix Layout & Grid System</h1>
+    <p>Use this simple mobile-first responsive grid to build layouts of your web pages. It's not just a twelve column
+        system, but a 1..10, 12, 16 and 25 column system!</p>
+    <h2>
+        Example
+    </h2>
+    <p>Barfix's grid system is so simple and easy to learn. It's fully responsive using CSS float. There is a "bx-float"
+        class for any container and the rest is all about column widths.</p>
+
+    <code>.bx-float</code>
+    <div class="bx-float margin-bottom-20">
+        <div class="bx-1-9">
+            <code>.bx-1-9</code>
+            1/9 screen 
+            <sub class="bx-fill">(any size)</sub>
+        </div>
+        <div class="bx-sm-1-7">
+            <code>.bx-sm-1-7</code>
+            1/7 screen (size >= sm)
+        </div>
+        <div class="bx-md-2-10">
+            <code>.bx-md-2-10</code>
+            2/12 screen width
+        </div>
+        <div class="bx-lg-2-12">
+            <code>.bx-lg-2-12</code>
+            3/16 screen width
+        </div>
+        <div class="bx-xl-3-16">
+            <code>.bx-xl-3-16</code>
+            4/25 screen width
+        </div>
+        <div class="bx-xxl-2-25">
+            <code>.bx-xxl-2-25</code>
+            4/25 screen width
+        </div>
+    </div>
+
+    <code>.bx-table</code>
+    <div class="bx-table margin-bottom-20">
+        <div class="bx-w-1">
+            <code>.bx-w-1</code>
+            Column 1
+        </div>
+        <div class="bx-w-2">
+            <code>.bx-w-2</code>
+            Column 2
+        </div>
+        <div class="bx-w-3">
+            <code>.bx-w-3</code>
+            Column 3
+        </div>
+    </div>
+    <div class="bx-pos-static-to-sm bx-pos-fixed  bx-fill-wh">منو</div>
+    <div class="bx-float">
+        <div class="bx-xxs-2-3">امید آرام</div>
+        <div class="bx-xxs-1-4">عکس</div>
+        <div class="bx-xxs-1-5">منو</div>
+        <div class="bx-xxs-2-7">امید آرام</div>
+        <div class="bx-xxs-1-2">عکس</div>
+        <div class="bx-xxs-1-6">منو</div>
+        <div class="bx-xxs-2-3">امید آرام</div>
+        <div class="bx-xxs-1-6">عکس</div>
+        <div class="bx-xxs-1-6">منو</div>
+        <div class="bx-xxs-2-3">امید آرام</div>
+        <div class="bx-xxs-1-6">عکس</div>
+    </div>
+</body>
+
+</html>

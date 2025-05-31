@@ -1,8 +1,11 @@
-function Barfix(ver) {
+function Barfix() {
     var _bx = this;
 
-    _bx.init = function () {
-    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //  Data Binding Functions...
+    //
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     var doReplaceLoopItems = function (templateContainer, listName, i) {
         var dataValues = $(templateContainer).find('[data-loop], [data-loop-keep], [data-if], [data-bind], [data-bind-once], [data-attr], [data-attr-once]');
@@ -267,6 +270,220 @@ function Barfix(ver) {
             }
         }
     };
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //  Module Loading Functions...
+    //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    var moduleFetched = function (type) {
+        if (window[type]) {
+
+            if (activeModules.indexOf(type) < 0) {
+                activeModules.push(type);
+            }
+            setLoadQueue(type, true);
+
+            eval(type + '.init()');
+        }
+        else {
+            setTimeout(function () {
+                moduleFetched(type);
+            }, 100);
+        }
+    };
+
+    appCommon.fetchModules = function (types) {
+        var key = JSON.stringify(types).replace(/ /gi, '_');;
+        _isAllQueued['appCommon.importModules.' + key] = false;
+
+        for (var i = 0; i < types.length; i++) {
+            var type = types[i];
+
+            setLoadQueue(type, false);
+
+            var moduleSourceClass = '.modules-container .' + type;
+            var moduleSource = $(document).find(moduleSourceClass);
+            if (moduleSource.length) {
+                moduleFetched(type);
+            }
+            else {
+                $('.modules-container').append($('<div class="' + type + '"></div>'));
+                moduleSource = $(document).find(moduleSourceClass);
+                appCommon.loadHtml(moduleSourceClass, plusVersion('pages/modules/' + type + '.html'), function (type) {
+                    moduleFetched(type);
+                });
+            }
+        }
+
+        _isAllQueued['appCommon.importModules.' + key] = true;
+    };
+
+    appCommon.loadActiveModules = function () {
+        //debugger;
+        $('.page-container [data-loop-template="true"]').each(function () {
+            if ($(this).css('display') != 'none') {
+                $(this).closest('[module]').attr('data-checked', 'false');
+            }
+        });
+
+        //$('.page-container [media-id="-1"]').each(function () {
+        //    var parentModule = $(this).closest('[module]');
+        //    if (parentModule) {
+        //        parentModule.attr('data-checked', 'false');
+        //    }
+        //});
+
+        for (var i = 0; i < activeModules.length; i++) {
+            var type = activeModules[i];
+            var $module = $('.modules-container').children('.' + type);
+            if ($module.length == 0) continue;
+
+            $('.page-container module[type="' + type + '"]').each(function () {
+                var $this = $(this);
+                if ($this.attr('data-loop-template') || $this.parents('[data-loop-template]').length) return;
+
+                var $moduleClone = $($module.children()[0].outerHTML);
+
+                //Copying module attributes
+                $.each(this.attributes, function (i, attrib) {
+                    if (attrib.name !== 'type' && attrib.name !== 'container') {
+                        if (attrib.name === 'class') {
+                            $moduleClone.addClass(attrib.value);
+                        } else {
+                            $moduleClone.attr(attrib.name, attrib.value);
+                        }
+                    }
+                });
+
+                $this.after($moduleClone);
+                $this.remove();
+            });
+
+            $('.page-container [module="' + type + '"]').each(function () {
+                var $this = $(this);
+                if ($this.attr('data-checked') == 'true' || $this.closest('[data-loop-template]').length) return;
+
+                eval(type + '.checkModule(this)');
+            });
+
+            var editorOf = $($module.children()[0]).attr('editor-of');
+            if (editorOf) {
+                //debugger;
+                $('.page-container [module="' + editorOf + '"]').each(function () {
+                    var $this = $(this);
+                    if ($this.attr('data-checked') != 'true' || $this.attr('editor') == 'loaded') return;
+
+                    var $moduleClone = $($module.children()[0].outerHTML);
+                    $this.append($moduleClone);
+                    $this.attr('editor', 'loaded');
+                });
+            }
+        }
+        //});
+    };
+    moduleLoaderTimer = window.setInterval(appCommon.loadActiveModules, 100);
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //  Page Loading Functions...
+    //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    let myLoadQueue = {};
+    let _isAllQueued = {};
+    let activeModules = [];
+    let activePageUrl = '';
+    let moduleLoaderTimer;
+
+    _bx.loadHtml = function (container, url, callback) {
+        var key = (url +container).replace(/ /gi, '_');
+        if (myLoadQueue[key]!= null) return;
+        setLoadQueue(key, false);
+
+        $(container).load(url, function () {
+            if (_hrefPrefix) {
+                $(container).find('a').each(function (i) {
+                    var href = $(this).attr('href');
+                    if (href) {
+                        $(this).attr('href', _hrefPrefix + href);
+                    }
+                });
+            }
+            setLoadQueue(key, true);
+            if (callback) callback($(container).attr('class'));
+        });
+    };
+
+    var setLoadQueue = function (url, isLoaded) {
+        if (isLoaded && !myLoadQueue.hasOwnProperty(url)) return;
+
+        myLoadQueue[url] = isLoaded;
+        //alert(url + ' : ' + isLoaded);
+        checkAllLoaded();
+    };
+
+    var checkAllLoaded = function () {
+        //if (!isAllQueued) return;
+        for (var key in _isAllQueued) {
+            if (!_isAllQueued[key]) return;
+        }
+        _isAllQueued = {};
+
+        for (var key in myLoadQueue) {
+            if (!myLoadQueue[key]) return;
+        }
+        myLoadQueue = {};
+
+        //documentReady();
+
+        //All Files loaded
+        $('.loading-panel-fill').fadeOut();
+        $('.loading-panel').fadeOut();
+    };
+
+    appCommon.enqueueImage = function (selector) {
+        var img = $(selector);
+        if (!img.attr('src')) return;
+
+        setLoadQueue('img.src=' + img.attr('src'), false);
+
+        img.one("load", function () {
+            setLoadQueue('img.src=' + img.attr('src'), true);
+        }).on("error", function () {
+            setLoadQueue('img.src=' + img.attr('src'), true);
+        }).each(function () {
+            if (this.complete) $(this).load();
+        });
+    };
+
+    appCommon.enqueueAllImages = function (container) {
+        _isAllQueued['appCommon.enqueueAllImages' + container] = false;
+
+        var imgs = $(container).find('img');
+        for (var i = 0; i < imgs.length; i++) {
+            appCommon.enqueueImage(imgs[i]);
+        }
+
+        _isAllQueued['appCommon.enqueueAllImages' + container] = true;
+        checkAllLoaded();
+    };
+
+    appCommon.recheckElement = function (element) {
+        window.clearInterval(moduleLoaderTimer);
+        $(element).attr('data-checked', 'false');
+        moduleLoaderTimer = window.setInterval(appCommon.loadActiveModules, 100);
+    };
+
+    appCommon.recheckAllElements = function (selector) {
+        if (!selector) selector = '.page-container';
+        appCommon.recheckElement(selector + ' [data-checked="true"]');
+    };
+
+    /////////////////////////////////////////////////
+    _bx.init = function () {
+    }
 
     _bx.init();
 
