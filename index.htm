@@ -23,6 +23,7 @@
     <style>
         body {
             padding: 12px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         div {
@@ -42,7 +43,10 @@
             direction: ltr;
         }
 
-        p,
+        p {
+            margin-bottom: 15px;
+        }
+
         .margin-bottom-20 {
             margin-bottom: 20px;
         }
@@ -89,30 +93,39 @@
     <div class="bx-float margin-bottom-20">
         <div class="bx-1-9">
             <code>.bx-1-9</code>
-            1/9 screen 
-            <sub class="bx-fill">(any size)</sub>
+            1/9 screen
+            <sub class="bx-block">(any size)</sub>
         </div>
         <div class="bx-sm-1-7">
             <code>.bx-sm-1-7</code>
-            1/7 screen (size >= sm)
+            1/7 screen
+            <sub class="bx-block">(size >= sm)</sub>
         </div>
         <div class="bx-md-2-10">
             <code>.bx-md-2-10</code>
-            2/12 screen width
+            2/10 screen
+            <sub class="bx-block">(size >= md)</sub>
         </div>
         <div class="bx-lg-2-12">
             <code>.bx-lg-2-12</code>
-            3/16 screen width
+            2/12 screen
+            <sub class="bx-block">(size >= lg)</sub>
         </div>
         <div class="bx-xl-3-16">
             <code>.bx-xl-3-16</code>
-            4/25 screen width
+            3/16 screen
+            <sub class="bx-block">(size >= xl)</sub>
         </div>
-        <div class="bx-xxl-2-25">
-            <code>.bx-xxl-2-25</code>
-            4/25 screen width
+        <div class="bx-xxl-3-25">
+            <code>.bx-xxl-3-25</code>
+            3/25 screen
+            <sub class="bx-block">(size >= xxl)</sub>
         </div>
     </div>
+
+    <p>Also we have a "bx-table"
+        class for any container to behave its children as table-cell. Size the cells by setting "bx-w-1" to "bx-w-25";
+        The number indicates weight of each cell rather than others.</p>
 
     <code>.bx-table</code>
     <div class="bx-table margin-bottom-20">
@@ -129,19 +142,19 @@
             Column 3
         </div>
     </div>
-    <div class="bx-pos-static-to-sm bx-pos-fixed  bx-fill-wh">منو</div>
-    <div class="bx-float">
-        <div class="bx-xxs-2-3">امید آرام</div>
-        <div class="bx-xxs-1-4">عکس</div>
-        <div class="bx-xxs-1-5">منو</div>
-        <div class="bx-xxs-2-7">امید آرام</div>
-        <div class="bx-xxs-1-2">عکس</div>
-        <div class="bx-xxs-1-6">منو</div>
-        <div class="bx-xxs-2-3">امید آرام</div>
-        <div class="bx-xxs-1-6">عکس</div>
-        <div class="bx-xxs-1-6">منو</div>
-        <div class="bx-xxs-2-3">امید آرام</div>
-        <div class="bx-xxs-1-6">عکس</div>
+
+    <p>There is also a positioning classes for nine positions of a rectangle.</p>
+
+    <div class="bx-pos-relative" style="height: 400px;">
+        <div class="bx-pos-top-left">Top-Left</div>
+        <div class="bx-pos-top-center">Top-Center</div>
+        <div class="bx-pos-top-right">Top-Right</div>
+        <div class="bx-pos-middle-start">Middle-Start</div>
+        <div class="bx-pos-middle-center">Middle-Center</div>
+        <div class="bx-pos-middle-end">Middle-End</div>
+        <div class="bx-pos-bottom-left">Bottom-Left</div>
+        <div class="bx-pos-bottom-center">Bottom-Center</div>
+        <div class="bx-pos-bottom-right">Bottom-Right</div>
     </div>
 </body>
 
