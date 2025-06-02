@@ -46,7 +46,7 @@
             height: 0;
             top: 6px;
             white-space: nowrap;
-            color: rgba(0, 0, 0, 0.7);
+            /* color: rgba(0, 0, 0, 0.7); */
             direction: ltr;
         }
 
@@ -56,24 +56,6 @@
 
         .margin-bottom-20 {
             margin-bottom: 20px;
-        }
-
-        .bx-float {
-            background-color: whitesmoke;
-        }
-
-        .bx-float>div {
-            background-color: #e2d9f3;
-            border-color: #c5b3e6;
-        }
-
-        .bx-table {
-            background-color: whitesmoke;
-        }
-
-        .bx-table>div {
-            background-color: #d1e7dd;
-            border-color: #a3cfbb;
         }
 
         .bx-table code,
@@ -102,33 +84,33 @@
         class for any container and the rest is all about column widths.</p>
 
     <code>.bx-float</code>
-    <div class="bx-float margin-bottom-20">
-        <div class="bx-1-9">
+    <div class="bx-float bx-purple-0 margin-bottom-20">
+        <div class="bx-1-9 bx-purple-1">
             <code>.bx-1-9</code>
             1/9 screen
             <sub class="bx-block">(any size)</sub>
         </div>
-        <div class="bx-sm-1-7">
+        <div class="bx-sm-1-7 bx-purple-2">
             <code>.bx-sm-1-7</code>
             1/7 screen
             <sub class="bx-block">(size >= sm)</sub>
         </div>
-        <div class="bx-md-2-10">
+        <div class="bx-md-2-10 bx-purple-3">
             <code>.bx-md-2-10</code>
             2/10 screen
             <sub class="bx-block">(size >= md)</sub>
         </div>
-        <div class="bx-lg-2-12">
+        <div class="bx-lg-2-12 bx-purple-4">
             <code>.bx-lg-2-12</code>
             2/12 screen
             <sub class="bx-block">(size >= lg)</sub>
         </div>
-        <div class="bx-xl-3-16">
+        <div class="bx-xl-3-16 bx-purple-5">
             <code>.bx-xl-3-16</code>
             3/16 screen
             <sub class="bx-block">(size >= xl)</sub>
         </div>
-        <div class="bx-xxl-3-25">
+        <div class="bx-xxl-3-25 bx-purple-6">
             <code>.bx-xxl-3-25</code>
             3/25 screen
             <sub class="bx-block">(size >= xxl)</sub>
@@ -140,16 +122,16 @@
         The number indicates weight of each cell rather than others.</p>
 
     <code>.bx-table</code>
-    <div class="bx-table margin-bottom-20">
-        <div class="bx-w-1">
+    <div class="bx-table bx-teal-0 margin-bottom-20">
+        <div class="bx-w-1 bx-teal-1">
             <code>.bx-w-1</code>
             Column 1
         </div>
-        <div class="bx-w-2">
+        <div class="bx-w-2 bx-teal-2">
             <code>.bx-w-2</code>
             Column 2
         </div>
-        <div class="bx-w-3">
+        <div class="bx-w-3 bx-teal-3">
             <code>.bx-w-3</code>
             Column 3
         </div>
@@ -158,47 +140,47 @@
     <p>There is also a positioning classes for nine positions of a rectangle. Just be carefull about container's width,
         height and position.</p>
 
-    <div class="bx-relative margin-bottom-20" style="height: 240px">
-        <div class="bx-top-left">
+    <div class="bx-relative bx-yellow-0 margin-bottom-20" style="height: 240px">
+        <div class="bx-top-left bx-yellow-1">
             <code>.bx-top-left</code>
             Top-Left
         </div>
-        <div class="bx-top-center">
+        <div class="bx-top-center bx-yellow-2">
             <code>.bx-top-center</code>
             Top-Center
         </div>
-        <div class="bx-top-right">
+        <div class="bx-top-right bx-yellow-3">
             <code>.bx-top-right</code>
             Top-Right
         </div>
-        <div class="bx-middle-start">
+        <div class="bx-middle-start bx-orange-1">
             <code>.bx-middle-start</code>
             Middle-Start
         </div>
-        <div class="bx-middle-center">
+        <div class="bx-middle-center bx-orange-2">
             <code>.bx-middle-center</code>
             Middle-Center
         </div>
-        <div class="bx-middle-end">
+        <div class="bx-middle-end bx-orange-3">
             <code>.bx-middle-end</code>
             Middle-End
         </div>
-        <div class="bx-bottom-left">
+        <div class="bx-bottom-left bx-red-1">
             <code>.bx-bottom-left</code>
             Bottom-Left
         </div>
-        <div class="bx-bottom-center">
+        <div class="bx-bottom-center bx-red-2">
             <code>.bx-bottom-center</code>
             Bottom-Center
         </div>
-        <div class="bx-bottom-right">
+        <div class="bx-bottom-right bx-red-3">
             <code>.bx-bottom-right</code>
             Bottom-Right
         </div>
     </div>
 
     <p>Preferably for images, it has a rectangle system to set the image (or any content) size to a specific aspect ratio. Developed for image layout pages like Instagram.</p>
-    <div class="bx-float">
+    <div class="bx-float bx-blue-1">
         <div class="bx-1-4 bx-rect-1-1">
             <code>.bx-rect-1-1</code>
             <img src="image.jpg" />
