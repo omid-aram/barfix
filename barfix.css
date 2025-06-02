@@ -32,7 +32,6 @@
 .bx-float>* {
     position: relative;
     width: 100%;
-    /* display: inline-block; */
     min-height: 1px;
     /* float: inline-start; */
     float: left;
@@ -64,7 +63,7 @@
     display: block;
 }
 
-.bx-fill-wh {
+/* .bx-fill-wh {
     width: 100%;
     height: 100%;
 }    
@@ -75,129 +74,954 @@
 
 .bx-fill-h {
     height: 100%;
-}
+} */
 
-.bx-pos-fixed {
+.bx-fixed {
     position: fixed;
     z-index: 999;
 }
 
-.bx-pos-relative {
+.bx-relative {
     position: relative;
 }
 
-.bx-pos-absolute {
+.bx-absolute {
     position: absolute;
     z-index: 999;
     top: 0;
     left: 0;
 }
 
-/*.bx-ltr .bx-pos-absolute {
+/********** Rect-Ratio ***********/
+
+[class*="bx-rect-"] {
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
-.bx-rtl .bx-pos-absolute {
-    right: '';
-}*/
+[class*="bx-rect-"]:after {
+    display: block;
+    content: '';
+}
 
-.bx-pos-top-left,
-.bx-ltr .bx-pos-top-start,
-.bx-rtl .bx-pos-top-end {
+[class*="bx-rect-"]>* {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+[class*="bx-rect-"]>img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.bx-rect-1-1:after {
+    padding-top: 100%;
+}
+
+.bx-rect-1-2:after {
+    padding-top: 50%;
+}
+
+.bx-rect-2-1:after {
+    padding-top: 200%;
+}
+
+.bx-rect-2-3:after {
+    padding-top: 66.66666667%;
+}
+
+.bx-rect-3-2:after {
+    padding-top: 150%;
+}
+
+.bx-rect-3-4:after {
+    padding-top: 75%;
+}
+
+.bx-rect-3-5:after {
+    padding-top: 60%;
+}
+
+.bx-rect-4-3:after {
+    padding-top: 133.33333333%;
+}
+
+.bx-rect-4-5:after {
+    padding-top: 80%;
+}
+
+.bx-rect-5-3:after {
+    padding-top: 166.66666667%;
+}
+
+.bx-rect-5-4:after {
+    padding-top: 125%;
+}
+
+.bx-rect-9-16:after {
+    padding-top: 56.25%;
+}
+
+.bx-rect-10-16:after {
+    padding-top: 62.5%;
+}
+
+.bx-rect-10-25:after {
+    padding-top: 40.32%;
+}
+
+.bx-rect-16-9:after {
+    padding-top: 177.77777778%;
+}
+
+.bx-rect-16-10:after {
+    padding-top: 160%;
+}
+
+.bx-rect-25-10:after {
+    padding-top: 250%;
+}
+
+/********** Positions ***********/
+
+.bx-top-left,
+.bx-ltr .bx-top-start,
+.bx-rtl .bx-top-end {
     position: absolute;
     top: 0;
     left: 0;
     right: unset;
+    bottom: unset;
 }
 
-.bx-pos-top-right,
-.bx-ltr .bx-pos-top-end,
-.bx-rtl .bx-pos-top-start {
+.bx-top-right,
+.bx-ltr .bx-top-end,
+.bx-rtl .bx-top-start {
     position: absolute;
     top: 0;
     right: 0;
     left: unset;
+    bottom: unset;
 }
 
-.bx-pos-bottom-right,
-.bx-ltr .bx-pos-bottom-end,
-.bx-rtl .bx-pos-bottom-start {
+.bx-bottom-right,
+.bx-ltr .bx-bottom-end,
+.bx-rtl .bx-bottom-start {
     position: absolute;
     bottom: 0;
     right: 0;
     left: unset;
+    top: unset;
 }
 
-.bx-pos-bottom-left,
-.bx-ltr .bx-pos-bottom-start,
-.bx-rtl .bx-pos-bottom-end {
+.bx-bottom-left,
+.bx-ltr .bx-bottom-start,
+.bx-rtl .bx-bottom-end {
     position: absolute;
     bottom: 0;
     left: 0;
     right: unset;
+    top: unset;
 }
 
-.bx-pos-top-center {
+.bx-top-center {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    right: unset;
+    bottom: unset;
 }
 
-.bx-pos-middle-center {
+.bx-middle-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    right: unset;
+    bottom: unset;
 }
 
-.bx-pos-bottom-center {
+.bx-bottom-center {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    right: unset;
+    top: unset;
 }
 
-.bx-pos-middle-left,
-.bx-ltr .bx-pos-middle-start,
-.bx-rtl .bx-pos-middle-end {
+.bx-middle-left,
+.bx-ltr .bx-middle-start,
+.bx-rtl .bx-middle-end {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
+    right: unset;
+    bottom: unset;
 }
 
-.bx-pos-middle-right,
-.bx-ltr .bx-pos-middle-end,
-.bx-rtl .bx-pos-middle-start {
+.bx-middle-right,
+.bx-ltr .bx-middle-end,
+.bx-rtl .bx-middle-start {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
+    left: unset;
+    bottom: unset;
 }
 
-/*.bx-table {
-    margin-right: 0;
-    margin-left: -100%;
+/********** Colors ***********/
+
+.bx-red-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
 }
-.bx-rtl .bx-table {
-    margin-right: -100%;
-    margin-left: 0;
+
+.bx-red-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
 }
-.bx-table-end{
-    float: right;
-    margin-right: 0;
-    margin-left: -100%;
+
+.bx-red-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
 }
-.bx-rtl .bx-table-end{
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-}*/
+
+.bx-red-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-red-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-red-5,
+.bx-red {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-red-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-red-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-red-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-red-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-orange-0 {
+    background-color: #fff7ed;
+    border-color: #e5ddd4;
+    color: black;
+}
+
+.bx-orange-1 {
+    background-color: #ffedd5;
+    border-color: #e5d4be;
+    color: black;
+}
+
+.bx-orange-2 {
+    background-color: #fed7aa;
+    border-color: #e5c096;
+    color: black;
+}
+
+.bx-orange-3 {
+    background-color: #fdba74;
+    border-color: #e5a55f;
+    color: black;
+}
+
+.bx-orange-4 {
+    background-color: #fb923c;
+    border-color: #e57b03;
+    color: black;
+}
+
+.bx-orange-5,
+.bx-orange {
+    background-color: #f97316;
+    border-color: #e55e00;
+    color: white;
+}
+
+.bx-orange-6 {
+    background-color: #ea580c;
+    border-color: #dc4100;
+    color: white;
+}
+
+.bx-orange-7 {
+    background-color: #c2410c;
+    border-color: #b52f00;
+    color: white;
+}
+
+.bx-orange-8 {
+    background-color: #9a3412;
+    border-color: #8e2800;
+    color: white;
+}
+
+.bx-orange-9 {
+    background-color: #7c2d12;
+    border-color: #71250a;
+    color: white;
+}
+
+.bx-yellow-0 {
+    background-color: #fefce8;
+    border-color: #e4e2d0;
+    color: black;
+}
+
+.bx-yellow-1 {
+    background-color: #fef9c3;
+    border-color: #e4dfae;
+    color: black;
+}
+
+.bx-yellow-2 {
+    background-color: #fef08a;
+    border-color: #e5d777;
+    color: black;
+}
+
+.bx-yellow-3 {
+    background-color: #fde047;
+    border-color: #e5c81c;
+    color: black;
+}
+
+.bx-yellow-4 {
+    background-color: #facc15;
+    border-color: #e3b200;
+    color: black;
+}
+
+.bx-yellow-5,
+.bx-yellow {
+    background-color: #eab308;
+    border-color: #d79f00;
+    color: white;
+}
+
+.bx-yellow-6 {
+    background-color: #ca8a04;
+    border-color: #ba7900;
+    color: white;
+}
+
+.bx-yellow-7 {
+    background-color: #a16207;
+    border-color: #955500;
+    color: white;
+}
+
+.bx-yellow-8 {
+    background-color: #854d0e;
+    border-color: #7b4300;
+    color: white;
+}
+
+.bx-yellow-9 {
+    background-color: #713f12;
+    border-color: #673708;
+    color: white;
+}
+
+.bx-lime-0 {
+    background-color: #f7fee7;
+    border-color: #dde4cf;
+    color: black;
+}
+
+.bx-lime-1 {
+    background-color: #ecfccb;
+    border-color: #d4e2b5;
+    color: black;
+}
+
+.bx-lime-2 {
+    background-color: #d9f99d;
+    border-color: #c2df89;
+    color: black;
+}
+
+.bx-lime-3 {
+    background-color: #bef264;
+    border-color: #a8db48;
+    color: black;
+}
+
+.bx-lime-4 {
+    background-color: #a3e635;
+    border-color: #8ace00;
+    color: black;
+}
+
+.bx-lime-5,
+.bx-lime {
+    background-color: #84cc16;
+    border-color: #6fb900;
+    color: white;
+}
+
+.bx-lime-6 {
+    background-color: #65a30d;
+    border-color: #549400;
+    color: white;
+}
+
+.bx-lime-7 {
+    background-color: #4d7c0f;
+    border-color: #417000;
+    color: white;
+}
+
+.bx-lime-8 {
+    background-color: #3f6212;
+    border-color: #355800;
+    color: white;
+}
+
+.bx-lime-9 {
+    background-color: #365314;
+    border-color: #2f4a0c;
+    color: white;
+}
+
+.bx-green-0 {
+    background-color: #f0fdf4;
+    border-color: #d7e3db;
+    color: black;
+}
+
+.bx-green-1 {
+    background-color: #dcfce7;
+    border-color: #c5e2cf;
+    color: black;
+}
+
+.bx-green-2 {
+    background-color: #bbf7d0;
+    border-color: #a6deb9;
+    color: black;
+}
+
+.bx-green-3 {
+    background-color: #86efac;
+    border-color: #6ed896;
+    color: black;
+}
+
+.bx-green-4 {
+    background-color: #4ade80;
+    border-color: #04c866;
+    color: black;
+}
+
+.bx-green-5,
+.bx-green {
+    background-color: #22c55e;
+    border-color: #00b447;
+    color: white;
+}
+
+.bx-green-6 {
+    background-color: #16a34a;
+    border-color: #009537;
+    color: white;
+}
+
+.bx-green-7 {
+    background-color: #15803d;
+    border-color: #007430;
+    color: white;
+}
+
+.bx-green-8 {
+    background-color: #166534;
+    border-color: #005b2b;
+    color: white;
+}
+
+.bx-green-9 {
+    background-color: #14532d;
+    border-color: #0b4b26;
+    color: white;
+}
+
+.bx-teal-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-teal-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-teal-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-teal-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-teal-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-teal-5,
+.bx-teal {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-teal-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-teal-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-teal-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-teal-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-cyan-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-cyan-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-cyan-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-cyan-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-cyan-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-cyan-5,
+.bx-cyan {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-cyan-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-cyan-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-cyan-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-cyan-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-blue-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-blue-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-blue-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-blue-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-blue-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-blue-5,
+.bx-blue {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-blue-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-blue-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-blue-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-blue-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-indigo-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-indigo-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-indigo-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-indigo-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-indigo-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-indigo-5,
+.bx-indigo {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-indigo-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-indigo-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-indigo-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-indigo-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-purple-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-purple-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-purple-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-purple-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-purple-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-purple-5,
+.bx-purple {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-purple-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-purple-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-purple-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-purple-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-pink-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-pink-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-pink-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-pink-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-pink-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-pink-5,
+.bx-pink {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-pink-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-pink-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-pink-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-pink-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+.bx-gray-0 {
+    background-color: #fef2f2;
+    border-color: #e4d9d9;
+    color: black;
+}
+
+.bx-gray-1 {
+    background-color: #fee2e2;
+    border-color: #e5cbcb;
+    color: black;
+}
+
+.bx-gray-2 {
+    background-color: #fecaca;
+    border-color: #e5b4b4;
+    color: black;
+}
+
+.bx-gray-3 {
+    background-color: #fca5a5;
+    border-color: #e59191;
+    color: black;
+}
+
+.bx-gray-4 {
+    background-color: #f87171;
+    border-color: #e5595c;
+    color: black;
+}
+
+.bx-gray-5,
+.bx-gray {
+    background-color: #ef4444;
+    border-color: #e12730;
+    color: white;
+}
+
+.bx-gray-6 {
+    background-color: #dc2626;
+    border-color: #cf0009;
+    color: white;
+}
+
+.bx-gray-7 {
+    background-color: #b91c1c;
+    border-color: #ad0006;
+    color: white;
+}
+
+.bx-gray-8 {
+    background-color: #991b1b;
+    border-color: #8e0610;
+    color: white;
+}
+
+.bx-gray-9 {
+    background-color: #7f1d1d;
+    border-color: #741517;
+    color: white;
+}
+
+/********** Borders and Spacers ***********/
+
 .bx-hidden {
     display: none;
 }
 
-.bx-text-left,
+/* .bx-text-left,
 .bx-ltr .bx-text-start,
 .bx-rtl .bx-text-end {
     text-align: left;
@@ -211,9 +1035,9 @@
 
 .bx-text-center {
     text-align: center;
-}
+} */
 
-.bx-text-center>* {
+/* .bx-text-center>* {
     float: none;
     display: inline-block;
 }
@@ -240,53 +1064,7 @@
     background-color: whitesmoke;
     border: 0;
     color: gray;
-}
-
-[class^="bx-rect-"] {
-    position: relative;
-}
-
-[class^="bx-rect-"]:after {
-    display: block;
-    content: '';
-}
-
-.bx-rect-9-16:after {
-    padding-top: 56.25%;
-}
-
-.bx-rect-9-25:after {
-    padding-top: 36%;
-}
-
-.bx-rect-10-25:after {
-    padding-top: 40.32%;
-}
-
-.bx-rect-15-25:after {
-    padding-top: 60%;
-}
-
-.bx-rect-1-1:after {
-    padding-top: 100%;
-}
-
-.bx-rect-1-2:after {
-    padding-top: 50%;
-}
-
-.bx-rect-1-3:after {
-    padding-top: 33.33333333%;
-}
-
-[class^="bx-rect-"]>.bx-float {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
+} */
 
 .bx-spacer {
     width: 1px;
@@ -654,7 +1432,7 @@
         display: none;
     }
 
-    .bx-pos-static-to-sm {
+    .bx-static-to-sm {
         position: static;
         top: 0;
         left: 0;
@@ -1047,7 +1825,7 @@
         display: none;
     }
 
-    .bx-pos-static-to-md {
+    .bx-static-to-md {
         position: static;
         top: 0;
         left: 0;
@@ -1436,7 +2214,7 @@
         display: none;
     }
 
-    .bx-pos-static-to-lg {
+    .bx-static-to-lg {
         position: static;
         top: 0;
         left: 0;
@@ -1825,7 +2603,7 @@
         display: none;
     }
 
-    .bx-pos-static-to-xl {
+    .bx-static-to-xl {
         position: static;
         top: 0;
         left: 0;
@@ -2214,7 +2992,7 @@
         display: none;
     }
 
-    .bx-pos-static-to-xxl {
+    .bx-static-to-xxl {
         position: static;
         top: 0;
         left: 0;
