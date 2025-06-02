@@ -320,6 +320,10 @@
     color: white;
 }
 
+.bx-text-red {
+    color: #ef4444;
+}
+
 .bx-red-6 {
     background-color: #dc2626;
     border-color: #cf0009;
@@ -379,6 +383,10 @@
     background-color: #f97316;
     border-color: #e55e00;
     color: white;
+}
+
+.bx-text-orange {
+    color: #f97316;
 }
 
 .bx-orange-6 {
@@ -442,6 +450,10 @@
     color: white;
 }
 
+.bx-text-yellow {
+    color: #eab308;
+}
+
 .bx-yellow-6 {
     background-color: #ca8a04;
     border-color: #ba7900;
@@ -501,6 +513,10 @@
     background-color: #84cc16;
     border-color: #6fb900;
     color: white;
+}
+
+.bx-text-lime {
+    color: #84cc16;
 }
 
 .bx-lime-6 {
@@ -564,6 +580,10 @@
     color: white;
 }
 
+.bx-text-green {
+    color: #22c55e;
+}
+
 .bx-green-6 {
     background-color: #16a34a;
     border-color: #009537;
@@ -623,6 +643,10 @@
     background-color: #14b8a6;
     border-color: #00aa98;
     color: white;
+}
+
+.bx-text-teal {
+    color: #14b8a6;
 }
 
 .bx-teal-6 {
@@ -686,6 +710,10 @@
     color: white;
 }
 
+.bx-text-cyan {
+    color: #06b6d4;
+}
+
 .bx-cyan-6 {
     background-color: #0891b2;
     border-color: #0084a7;
@@ -745,6 +773,10 @@
     background-color: #3b82f6;
     border-color: #2876ee;
     color: white;
+}
+
+.bx-text-blue {
+    color: #3b82f6;
 }
 
 .bx-blue-6 {
@@ -808,6 +840,10 @@
     color: white;
 }
 
+.bx-text-indigo {
+    color: #6366f1;
+}
+
 .bx-indigo-6 {
     background-color: #4f46e5;
     border-color: #4833e0;
@@ -867,6 +903,10 @@
     background-color: #a855f7;
     border-color: #9d3fe8;
     color: white;
+}
+
+.bx-text-purple {
+    color: #a855f7;
 }
 
 .bx-purple-6 {
@@ -930,6 +970,10 @@
     color: white;
 }
 
+.bx-text-pink {
+    color: #ec4899;
+}
+
 .bx-pink-6 {
     background-color: #db2777;
     border-color: #d1006b;
@@ -991,6 +1035,10 @@
     color: white;
 }
 
+.bx-text-gray {
+    color: #6b7280;
+}
+
 .bx-gray-6 {
     background-color: #4b5563;
     border-color: #434d5c;
@@ -1016,15 +1064,23 @@
 }
 
 .bx-white {
-    background-color:white;
+    background-color: white;
     border-color: whitesmoke;
     color: black;
+}
+
+.bx-text-white {
+    color: white;
 }
 
 .bx-black {
     background-color: #030712;
     border-color: black;
     color: white;
+}
+
+.bx-text-black {
+    color: black;
 }
 
 /********** Borders and Spacers ***********/
