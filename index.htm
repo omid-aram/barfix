@@ -23,31 +23,20 @@
     <style>
         body {
             padding: 12px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
         }
 
-        div {
-            border: 1px solid silver;
-        }
-
+        bx-float,
+        bx-table,
+        bx-float div,
+        bx-table div,
         .bx-float,
         .bx-table,
         .bx-float div,
         .bx-table div,
         .bx-relative div {
             padding: 21px;
-        }
-
-        code {
-            display: block;
-            position: relative;
-            padding: 3px;
-            z-index: 10;
-            height: 0;
-            top: 6px;
-            white-space: nowrap;
-            /* color: rgba(0, 0, 0, 0.7); */
-            direction: ltr;
         }
 
         p {
@@ -57,149 +46,142 @@
         .margin-bottom-20 {
             margin-bottom: 20px;
         }
-
-        .bx-table code,
-        .bx-float code,
-        .bx-relative code {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-        }
-
-        [class*="bx-rect-"] {
-            color: rgba(255, 255, 255, 0.9);
-        }
     </style>
 </head>
 
 <body class="bx-xxl-paper bx-ltr">
     <h1>Barfix Layout & Grid System</h1>
-    <p>Use this simple mobile-first responsive grid to build layouts of your web pages. It's not just a twelve column
+    <p>Use this simple mobile-first responsive grid to build layouts of your web pages. It's not just a twelve
+        column
         system, but a 1..10, 12, 16 and 25 column system!</p>
     <h2>
-        Example
+        How it works
     </h2>
-    <p>Barfix's grid system is so simple and easy to learn. It's fully responsive using CSS float. There is a "bx-float"
-        class for any container and the rest is all about column widths.</p>
+    <p>Barfix's grid system is so simple and easy to learn. It's fully responsive using CSS float. There is a
+        "<blue>bx-float</blue>"
+        class for any container and the rest is all about column widths.
+    </p>
 
-    <code>.bx-float</code>
-    <div class="bx-float bx-purple-0 margin-bottom-20">
-        <div class="bx-1-9 bx-purple-1">
-            <code>.bx-1-9</code>
-            1/9 screen
-            <sub class="bx-block">(any size)</sub>
-        </div>
-        <div class="bx-sm-1-7 bx-purple-2">
-            <code>.bx-sm-1-7</code>
-            1/7 screen
-            <sub class="bx-block">(size >= sm)</sub>
-        </div>
-        <div class="bx-md-2-10 bx-purple-3">
-            <code>.bx-md-2-10</code>
-            2/10 screen
-            <sub class="bx-block">(size >= md)</sub>
-        </div>
-        <div class="bx-lg-2-12 bx-purple-4">
-            <code>.bx-lg-2-12</code>
-            2/12 screen
-            <sub class="bx-block">(size >= lg)</sub>
-        </div>
-        <div class="bx-xl-3-16 bx-purple-5">
-            <code>.bx-xl-3-16</code>
-            3/16 screen
-            <sub class="bx-block">(size >= xl)</sub>
-        </div>
-        <div class="bx-xxl-3-25 bx-purple-6">
-            <code>.bx-xxl-3-25</code>
-            3/25 screen
-            <sub class="bx-block">(size >= xxl)</sub>
-        </div>
-    </div>
+    <bx-tag>div <red>class</red>=<blue>"bx-float"</blue></bx-tag> or <bx-tag>bx-float</bx-tag>
+    <bx-hover>
+        <bx-border>
+            <bx-float class="bx-purple-0">
+                <div class="bx-1-9 bx-purple-2 ">
+                    .bx-1-9
+                </div>
+                <div class="bx-sm-1-7 bx-purple-4">
+                    .bx-sm-1-7
+                </div>
+                <div class="bx-md-2-10 bx-purple-6">
+                    .bx-md-2-10
+                </div>
+                <div class="bx-lg-2-12 bx-purple-8">
+                    .bx-lg-2-12
+                </div>
+                <div class="bx-xl-3-16 bx-pink-5">
+                    .bx-xl-3-16
+                </div>
+                <div class="bx-xxl-3-25 bx-pink-3">
+                    .bx-xxl-3-25
+                </div>
+            </bx-float>
+        </bx-border>
+    </bx-hover>
 
-    <p>Also we have a "bx-table"
-        class for any container to behave its children as table-cell. Size the cells by setting "bx-w-1" to "bx-w-25";
-        The number indicates weight of each cell rather than others.</p>
+    <p>
+        <sub class="margin-bottom-20">Hint: "<blue>bx-sm-2-5</blue>" sets width to 2/5 of the screen when it is "small"
+            or greater.</sub>
+    </p>
 
-    <code>.bx-table</code>
-    <div class="bx-table bx-teal-0 margin-bottom-20">
-        <div class="bx-w-1 bx-teal-1">
-            <code>.bx-w-1</code>
-            Column 1
-        </div>
-        <div class="bx-w-2 bx-teal-2">
-            <code>.bx-w-2</code>
-            Column 2
-        </div>
-        <div class="bx-w-3 bx-teal-3">
-            <code>.bx-w-3</code>
-            Column 3
-        </div>
-    </div>
+    <p>Also we have a "<blue>bx-table</blue>"
+        class for any container to behave its children as table-cell. Size the cells by setting "<blue>bx-w-1</blue>" to
+        "<blue>bx-w-25</blue>";
+        The number (1..25) indicates weight of each cell rather than others.</p>
 
-    <p>There is also a positioning classes for nine positions of a rectangle. Just be carefull about container's width,
+    <bx-tag>div <red>class</red>=<blue>"bx-table"</blue></bx-tag> or <bx-tag>bx-table</bx-tag>
+    <bx-hover>
+        <bx-border>
+            <bx-table class="bx-cyan-0 margin-bottom-20">
+                <div class="bx-w-1 bx-teal-1">
+                    .bx-w-1
+                </div>
+                <div class="bx-w-2 bx-green-1">
+                    .bx-w-2
+                </div>
+                <div class="bx-w-3 bx-lime-1">
+                    .bx-w-3
+                </div>
+            </bx-table>
+        </bx-border>
+    </bx-hover>
+
+    <h2>
+        Place it, where ever you want
+    </h2>
+    <p>There is also a positioning classes for nine positions of a box. Just be carefull about container's
+        width,
         height and position.</p>
 
     <div class="bx-relative bx-yellow-0 margin-bottom-20" style="height: 240px">
-        <div class="bx-top-left bx-yellow-1">
-            <code>.bx-top-left</code>
-            Top-Left
+        <bx-hover>
+            <bx-border>
+                <div class="bx-top-left bx-yellow-1">
+                    .bx-top-left
+                </div>
+                <div class="bx-top-center bx-yellow-2">
+                    .bx-top-center
+                </div>
+                <div class="bx-top-right bx-yellow-3">
+                    .bx-top-right
+                </div>
+                <div class="bx-middle-start bx-orange-1">
+                    .bx-middle-start
+                </div>
+                <div class="bx-middle-center bx-orange-2">
+                    .bx-middle-center
+                </div>
+                <div class="bx-middle-end bx-orange-3">
+                    .bx-middle-end
+                </div>
+                <div class="bx-bottom-left bx-red-1">
+                    .bx-bottom-left
+                </div>
+                <div class="bx-bottom-center bx-red-2">
+                    .bx-bottom-center
+                </div>
+                <div class="bx-bottom-right bx-red-3">
+                    .bx-bottom-right
+                </div>
+            </bx-border>
+        </bx-hover>
+    </div>
+
+    <h2>
+        Shape it, How ever you want
+    </h2>
+    <p>Preferably for images, it has a ratio system to set the image (or any content) size to a specific aspect
+        ratio. Developed for image layout pages like Instagram.</p>
+    <div class="bx-float bx-blue-0 bx-border bx-text-white margin-bottom-20">
+        <div class="bx-1-4 bx-ratio-1-1">
+            <img src="image.jpg" />
+            <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
         </div>
-        <div class="bx-top-center bx-yellow-2">
-            <code>.bx-top-center</code>
-            Top-Center
+        <div class="bx-1-4 bx-ratio-3-4" style="background-image: url('image.jpg'); background-size: cover;">
+            <span class="bx-bottom-left">.bx-ratio-3-4 (Using Background)</span>
         </div>
-        <div class="bx-top-right bx-yellow-3">
-            <code>.bx-top-right</code>
-            Top-Right
+        <div class="bx-1-4 bx-ratio-9-16">
+            <img src="image.jpg" />
+            <span class="bx-bottom-left">.bx-ratio-9-16</span>
         </div>
-        <div class="bx-middle-start bx-orange-1">
-            <code>.bx-middle-start</code>
-            Middle-Start
-        </div>
-        <div class="bx-middle-center bx-orange-2">
-            <code>.bx-middle-center</code>
-            Middle-Center
-        </div>
-        <div class="bx-middle-end bx-orange-3">
-            <code>.bx-middle-end</code>
-            Middle-End
-        </div>
-        <div class="bx-bottom-left bx-red-1">
-            <code>.bx-bottom-left</code>
-            Bottom-Left
-        </div>
-        <div class="bx-bottom-center bx-red-2">
-            <code>.bx-bottom-center</code>
-            Bottom-Center
-        </div>
-        <div class="bx-bottom-right bx-red-3">
-            <code>.bx-bottom-right</code>
-            Bottom-Right
+        <div class="bx-1-4 bx-ratio-16-9">
+            <img src="image.jpg" />
+            <span class="bx-bottom-left">.bx-ratio-16-9</span>
         </div>
     </div>
 
-    <p>Preferably for images, it has a rectangle system to set the image (or any content) size to a specific aspect ratio. Developed for image layout pages like Instagram.</p>
-    <div class="bx-float bx-blue-1">
-        <div class="bx-1-4 bx-rect-1-1">
-            <code>.bx-rect-1-1</code>
-            <img src="image.jpg" />
-            <span class="bx-bottom-center">Image</span>
-        </div>
-        <div class="bx-1-4 bx-rect-3-4" style="background-image: url('image.jpg'); background-size: cover;">
-            <code>.bx-rect-3-4</code>
-            <span class="bx-bottom-center">Background</span>
-        </div>
-        <div class="bx-1-4 bx-rect-9-16">
-            <code>.bx-rect-9-16</code>
-            <img src="image.jpg" />
-        </div>
-        <div class="bx-1-4 bx-rect-16-9">
-            <code>.bx-rect-16-9</code>
-            <img src="image.jpg" />
-            <span class="bx-bottom-center">Vertival</span>
-        </div>
-    </div>
+    <h2>
+        Color it, Like a colorist
+    </h2>
 </body>
 
 </html>
