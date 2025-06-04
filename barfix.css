@@ -336,12 +336,19 @@ bx-border [class*=" bx-black"],
 
 /********** Colors ***********/
 
+/* Color Red */
+
+.bx-dark bx-hover .bx-red-9:hover,
+.bx-dark .bx-red-9.bx-hover:hover,
 .bx-red-0 {
     background-color: #fef2f2;
     border-color: #e4d9d9;
     color: black;
 }
 
+.bx-dark bx-hover .bx-red-8:hover,
+.bx-dark .bx-red-8.bx-hover:hover,
+.bx-dark .bx-red-9,
 bx-hover .bx-red-0:hover,
 .bx-red-0.bx-hover:hover,
 .bx-red-1 {
@@ -350,6 +357,9 @@ bx-hover .bx-red-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-red-7:hover,
+.bx-dark .bx-red-7.bx-hover:hover,
+.bx-dark .bx-red-8,
 bx-hover .bx-red-1:hover,
 .bx-red-1.bx-hover:hover,
 .bx-red-2 {
@@ -358,6 +368,9 @@ bx-hover .bx-red-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-red-6:hover,
+.bx-dark .bx-red-6.bx-hover:hover,
+.bx-dark .bx-red-7,
 bx-hover .bx-red-2:hover,
 .bx-red-2.bx-hover:hover,
 .bx-red-3 {
@@ -366,6 +379,9 @@ bx-hover .bx-red-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-red-5:hover,
+.bx-dark .bx-red-5.bx-hover:hover,
+.bx-dark .bx-red-6,
 bx-hover .bx-red-3:hover,
 .bx-red-3.bx-hover:hover,
 .bx-red-4 {
@@ -374,7 +390,16 @@ bx-hover .bx-red-3:hover,
     color: black;
 }
 
-bx-red,
+.bx-dark red,
+.bx-dark .bx-text-red {
+    color: #f87171;
+}
+
+.bx-dark bx-hover .bx-red:hover,
+.bx-dark .bx-red.bx-hover:hover,
+.bx-dark bx-hover .bx-red-4:hover,
+.bx-dark .bx-red-4.bx-hover:hover,
+.bx-dark .bx-red-5,
 bx-hover .bx-red-4:hover,
 .bx-red-4.bx-hover:hover,
 .bx-red-5,
@@ -389,19 +414,12 @@ red,
     color: #dc2626;
 }
 
-bx-tag {
-    font-family: monospace;
-    color: purple;
-}
-
-bx-tag:before {
-    content: '<';
-}
-
-bx-tag:after {
-    content: '>';
-}
-
+.bx-dark bx-hover .bx-red-3:hover,
+.bx-dark .bx-red-3.bx-hover:hover,
+.bx-dark .bx-red-4,
+.bx-dark .bx-red,
+bx-hover .bx-red:hover,
+.bx-red.bx-hover:hover,
 bx-hover .bx-red-5:hover,
 .bx-red-5.bx-hover:hover,
 .bx-red-6 {
@@ -410,6 +428,9 @@ bx-hover .bx-red-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-red-2:hover,
+.bx-dark .bx-red-2.bx-hover:hover,
+.bx-dark .bx-red-3,
 bx-hover .bx-red-6:hover,
 .bx-red-6.bx-hover:hover,
 .bx-red-7 {
@@ -418,6 +439,9 @@ bx-hover .bx-red-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-red-1:hover,
+.bx-dark .bx-red-1.bx-hover:hover,
+.bx-dark .bx-red-2,
 bx-hover .bx-red-7:hover,
 .bx-red-7.bx-hover:hover,
 .bx-red-8 {
@@ -426,6 +450,9 @@ bx-hover .bx-red-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-red-0:hover,
+.bx-dark .bx-red-0.bx-hover:hover,
+.bx-dark .bx-red-1,
 bx-hover .bx-red-8:hover,
 .bx-red-8.bx-hover:hover,
 .bx-red-9 {
@@ -434,12 +461,27 @@ bx-hover .bx-red-8:hover,
     color: white;
 }
 
+.bx-dark .bx-red-0,
+bx-hover .bx-red-9:hover,
+.bx-red-9.bx-hover:hover {
+    background-color: #450a0a;
+    border-color: #430708;
+    color: white;
+}
+
+/* Color Orange */
+
+.bx-dark bx-hover .bx-orange-9:hover,
+.bx-dark .bx-orange-9.bx-hover:hover,
 .bx-orange-0 {
     background-color: #fff7ed;
     border-color: #e5ddd4;
     color: black;
 }
 
+.bx-dark bx-hover .bx-orange-8:hover,
+.bx-dark .bx-orange-8.bx-hover:hover,
+.bx-dark .bx-orange-9,
 bx-hover .bx-orange-0:hover,
 .bx-orange-0.bx-hover:hover,
 .bx-orange-1 {
@@ -448,6 +490,9 @@ bx-hover .bx-orange-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-orange-7:hover,
+.bx-dark .bx-orange-7.bx-hover:hover,
+.bx-dark .bx-orange-8,
 bx-hover .bx-orange-1:hover,
 .bx-orange-1.bx-hover:hover,
 .bx-orange-2 {
@@ -456,6 +501,9 @@ bx-hover .bx-orange-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-orange-6:hover,
+.bx-dark .bx-orange-6.bx-hover:hover,
+.bx-dark .bx-orange-7,
 bx-hover .bx-orange-2:hover,
 .bx-orange-2.bx-hover:hover,
 .bx-orange-3 {
@@ -464,6 +512,9 @@ bx-hover .bx-orange-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-orange-5:hover,
+.bx-dark .bx-orange-5.bx-hover:hover,
+.bx-dark .bx-orange-6,
 bx-hover .bx-orange-3:hover,
 .bx-orange-3.bx-hover:hover,
 .bx-orange-4 {
@@ -472,6 +523,14 @@ bx-hover .bx-orange-3:hover,
     color: black;
 }
 
+.bx-dark orange,
+.bx-dark .bx-text-orange {
+    color: #fb923c;
+}
+
+.bx-dark bx-hover .bx-orange-4:hover,
+.bx-dark .bx-orange-4.bx-hover:hover,
+.bx-dark .bx-orange-5,
 bx-hover .bx-orange-4:hover,
 .bx-orange-4.bx-hover:hover,
 .bx-orange-5,
@@ -486,6 +545,11 @@ orange,
     color: #ea580c;
 }
 
+.bx-dark bx-hover .bx-orange-3:hover,
+.bx-dark .bx-orange-3.bx-hover:hover,
+.bx-dark .bx-orange-4,
+bx-hover .bx-orange:hover,
+.bx-orange.bx-hover:hover,
 bx-hover .bx-orange-5:hover,
 .bx-orange-5.bx-hover:hover,
 .bx-orange-6 {
@@ -494,6 +558,9 @@ bx-hover .bx-orange-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-orange-2:hover,
+.bx-dark .bx-orange-2.bx-hover:hover,
+.bx-dark .bx-orange-3,
 bx-hover .bx-orange-6:hover,
 .bx-orange-6.bx-hover:hover,
 .bx-orange-7 {
@@ -502,6 +569,9 @@ bx-hover .bx-orange-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-orange-1:hover,
+.bx-dark .bx-orange-1.bx-hover:hover,
+.bx-dark .bx-orange-2,
 bx-hover .bx-orange-7:hover,
 .bx-orange-7.bx-hover:hover,
 .bx-orange-8 {
@@ -510,6 +580,9 @@ bx-hover .bx-orange-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-orange-0:hover,
+.bx-dark .bx-orange-0.bx-hover:hover,
+.bx-dark .bx-orange-1,
 bx-hover .bx-orange-8:hover,
 .bx-orange-8.bx-hover:hover,
 .bx-orange-9 {
@@ -518,12 +591,27 @@ bx-hover .bx-orange-8:hover,
     color: white;
 }
 
+.bx-dark .bx-orange-0,
+bx-hover .bx-orange-9:hover,
+.bx-orange-9.bx-hover:hover {
+    background-color: #431407;
+    border-color: #411205;
+    color: white;
+}
+
+/* Color Yellow */
+
+.bx-dark bx-hover .bx-yellow-9:hover,
+.bx-dark .bx-yellow-9.bx-hover:hover,
 .bx-yellow-0 {
     background-color: #fefce8;
     border-color: #e4e2d0;
     color: black;
 }
 
+.bx-dark bx-hover .bx-yellow-8:hover,
+.bx-dark .bx-yellow-8.bx-hover:hover,
+.bx-dark .bx-yellow-9,
 bx-hover .bx-yellow-0:hover,
 .bx-yellow-0.bx-hover:hover,
 .bx-yellow-1 {
@@ -532,6 +620,9 @@ bx-hover .bx-yellow-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-yellow-7:hover,
+.bx-dark .bx-yellow-7.bx-hover:hover,
+.bx-dark .bx-yellow-8,
 bx-hover .bx-yellow-1:hover,
 .bx-yellow-1.bx-hover:hover,
 .bx-yellow-2 {
@@ -540,6 +631,9 @@ bx-hover .bx-yellow-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-yellow-6:hover,
+.bx-dark .bx-yellow-6.bx-hover:hover,
+.bx-dark .bx-yellow-7,
 bx-hover .bx-yellow-2:hover,
 .bx-yellow-2.bx-hover:hover,
 .bx-yellow-3 {
@@ -548,6 +642,9 @@ bx-hover .bx-yellow-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-yellow-5:hover,
+.bx-dark .bx-yellow-5.bx-hover:hover,
+.bx-dark .bx-yellow-6,
 bx-hover .bx-yellow-3:hover,
 .bx-yellow-3.bx-hover:hover,
 .bx-yellow-4 {
@@ -556,6 +653,14 @@ bx-hover .bx-yellow-3:hover,
     color: black;
 }
 
+.bx-dark yellow,
+.bx-dark .bx-text-yellow {
+    color: #facc15;
+}
+
+.bx-dark bx-hover .bx-yellow-4:hover,
+.bx-dark .bx-yellow-4.bx-hover:hover,
+.bx-dark .bx-yellow-5,
 bx-hover .bx-yellow-4:hover,
 .bx-yellow-4.bx-hover:hover,
 .bx-yellow-5,
@@ -570,6 +675,11 @@ yellow,
     color: #ca8a04;
 }
 
+.bx-dark bx-hover .bx-yellow-3:hover,
+.bx-dark .bx-yellow-3.bx-hover:hover,
+.bx-dark .bx-yellow-4,
+bx-hover .bx-yellow:hover,
+.bx-yellow.bx-hover:hover,
 bx-hover .bx-yellow-5:hover,
 .bx-yellow-5.bx-hover:hover,
 .bx-yellow-6 {
@@ -578,6 +688,9 @@ bx-hover .bx-yellow-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-yellow-2:hover,
+.bx-dark .bx-yellow-2.bx-hover:hover,
+.bx-dark .bx-yellow-3,
 bx-hover .bx-yellow-6:hover,
 .bx-yellow-6.bx-hover:hover,
 .bx-yellow-7 {
@@ -586,6 +699,9 @@ bx-hover .bx-yellow-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-yellow-1:hover,
+.bx-dark .bx-yellow-1.bx-hover:hover,
+.bx-dark .bx-yellow-2,
 bx-hover .bx-yellow-7:hover,
 .bx-yellow-7.bx-hover:hover,
 .bx-yellow-8 {
@@ -594,6 +710,9 @@ bx-hover .bx-yellow-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-yellow-0:hover,
+.bx-dark .bx-yellow-0.bx-hover:hover,
+.bx-dark .bx-yellow-1,
 bx-hover .bx-yellow-8:hover,
 .bx-yellow-8.bx-hover:hover,
 .bx-yellow-9 {
@@ -602,12 +721,27 @@ bx-hover .bx-yellow-8:hover,
     color: white;
 }
 
+.bx-dark .bx-yellow-0,
+bx-hover .bx-yellow-9:hover,
+.bx-yellow-9.bx-hover:hover {
+    background-color: #422006;
+    border-color: #401e03;
+    color: white;
+}
+
+/* Color Lime */
+
+.bx-dark bx-hover .bx-lime-9:hover,
+.bx-dark .bx-lime-9.bx-hover:hover,
 .bx-lime-0 {
     background-color: #f7fee7;
     border-color: #dde4cf;
     color: black;
 }
 
+.bx-dark bx-hover .bx-lime-8:hover,
+.bx-dark .bx-lime-8.bx-hover:hover,
+.bx-dark .bx-lime-9,
 bx-hover .bx-lime-0:hover,
 .bx-lime-0.bx-hover:hover,
 .bx-lime-1 {
@@ -616,6 +750,9 @@ bx-hover .bx-lime-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-lime-7:hover,
+.bx-dark .bx-lime-7.bx-hover:hover,
+.bx-dark .bx-lime-8,
 bx-hover .bx-lime-1:hover,
 .bx-lime-1.bx-hover:hover,
 .bx-lime-2 {
@@ -624,6 +761,9 @@ bx-hover .bx-lime-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-lime-6:hover,
+.bx-dark .bx-lime-6.bx-hover:hover,
+.bx-dark .bx-lime-7,
 bx-hover .bx-lime-2:hover,
 .bx-lime-2.bx-hover:hover,
 .bx-lime-3 {
@@ -632,6 +772,9 @@ bx-hover .bx-lime-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-lime-5:hover,
+.bx-dark .bx-lime-5.bx-hover:hover,
+.bx-dark .bx-lime-6,
 bx-hover .bx-lime-3:hover,
 .bx-lime-3.bx-hover:hover,
 .bx-lime-4 {
@@ -640,6 +783,14 @@ bx-hover .bx-lime-3:hover,
     color: black;
 }
 
+.bx-dark lime,
+.bx-dark .bx-text-lime {
+    color: #a3e635;
+}
+
+.bx-dark bx-hover .bx-lime-4:hover,
+.bx-dark .bx-lime-4.bx-hover:hover,
+.bx-dark .bx-lime-5,
 bx-hover .bx-lime-4:hover,
 .bx-lime-4.bx-hover:hover,
 .bx-lime-5,
@@ -654,6 +805,11 @@ lime,
     color: #65a30d;
 }
 
+.bx-dark bx-hover .bx-lime-3:hover,
+.bx-dark .bx-lime-3.bx-hover:hover,
+.bx-dark .bx-lime-4,
+bx-hover .bx-lime:hover,
+.bx-lime.bx-hover:hover,
 bx-hover .bx-lime-5:hover,
 .bx-lime-5.bx-hover:hover,
 .bx-lime-6 {
@@ -662,6 +818,9 @@ bx-hover .bx-lime-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-lime-2:hover,
+.bx-dark .bx-lime-2.bx-hover:hover,
+.bx-dark .bx-lime-3,
 bx-hover .bx-lime-6:hover,
 .bx-lime-6.bx-hover:hover,
 .bx-lime-7 {
@@ -670,6 +829,9 @@ bx-hover .bx-lime-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-lime-1:hover,
+.bx-dark .bx-lime-1.bx-hover:hover,
+.bx-dark .bx-lime-2,
 bx-hover .bx-lime-7:hover,
 .bx-lime-7.bx-hover:hover,
 .bx-lime-8 {
@@ -678,6 +840,9 @@ bx-hover .bx-lime-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-lime-0:hover,
+.bx-dark .bx-lime-0.bx-hover:hover,
+.bx-dark .bx-lime-1,
 bx-hover .bx-lime-8:hover,
 .bx-lime-8.bx-hover:hover,
 .bx-lime-9 {
@@ -686,12 +851,27 @@ bx-hover .bx-lime-8:hover,
     color: white;
 }
 
+.bx-dark .bx-lime-0,
+bx-hover .bx-lime-9:hover,
+.bx-lime-9.bx-hover:hover {
+    background-color: #1a2e05;
+    border-color: #172c02;
+    color: white;
+}
+
+/* Color Green */
+
+.bx-dark bx-hover .bx-green-9:hover,
+.bx-dark .bx-green-9.bx-hover:hover,
 .bx-green-0 {
     background-color: #f0fdf4;
     border-color: #d7e3db;
     color: black;
 }
 
+.bx-dark bx-hover .bx-green-8:hover,
+.bx-dark .bx-green-8.bx-hover:hover,
+.bx-dark .bx-green-9,
 bx-hover .bx-green-0:hover,
 .bx-green-0.bx-hover:hover,
 .bx-green-1 {
@@ -700,6 +880,9 @@ bx-hover .bx-green-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-green-7:hover,
+.bx-dark .bx-green-7.bx-hover:hover,
+.bx-dark .bx-green-8,
 bx-hover .bx-green-1:hover,
 .bx-green-1.bx-hover:hover,
 .bx-green-2 {
@@ -708,6 +891,9 @@ bx-hover .bx-green-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-green-6:hover,
+.bx-dark .bx-green-6.bx-hover:hover,
+.bx-dark .bx-green-7,
 bx-hover .bx-green-2:hover,
 .bx-green-2.bx-hover:hover,
 .bx-green-3 {
@@ -716,6 +902,9 @@ bx-hover .bx-green-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-green-5:hover,
+.bx-dark .bx-green-5.bx-hover:hover,
+.bx-dark .bx-green-6,
 bx-hover .bx-green-3:hover,
 .bx-green-3.bx-hover:hover,
 .bx-green-4 {
@@ -724,6 +913,14 @@ bx-hover .bx-green-3:hover,
     color: black;
 }
 
+.bx-dark green,
+.bx-dark .bx-text-green {
+    color: #4ade80;
+}
+
+.bx-dark bx-hover .bx-green-4:hover,
+.bx-dark .bx-green-4.bx-hover:hover,
+.bx-dark .bx-green-5,
 bx-hover .bx-green-4:hover,
 .bx-green-4.bx-hover:hover,
 .bx-green-5,
@@ -738,6 +935,11 @@ green,
     color: #16a34a;
 }
 
+.bx-dark bx-hover .bx-green-3:hover,
+.bx-dark .bx-green-3.bx-hover:hover,
+.bx-dark .bx-green-4,
+bx-hover .bx-green:hover,
+.bx-green.bx-hover:hover,
 bx-hover .bx-green-5:hover,
 .bx-green-5.bx-hover:hover,
 .bx-green-6 {
@@ -746,6 +948,9 @@ bx-hover .bx-green-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-green-2:hover,
+.bx-dark .bx-green-2.bx-hover:hover,
+.bx-dark .bx-green-3,
 bx-hover .bx-green-6:hover,
 .bx-green-6.bx-hover:hover,
 .bx-green-7 {
@@ -754,6 +959,9 @@ bx-hover .bx-green-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-green-1:hover,
+.bx-dark .bx-green-1.bx-hover:hover,
+.bx-dark .bx-green-2,
 bx-hover .bx-green-7:hover,
 .bx-green-7.bx-hover:hover,
 .bx-green-8 {
@@ -762,6 +970,9 @@ bx-hover .bx-green-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-green-0:hover,
+.bx-dark .bx-green-0.bx-hover:hover,
+.bx-dark .bx-green-1,
 bx-hover .bx-green-8:hover,
 .bx-green-8.bx-hover:hover,
 .bx-green-9 {
@@ -770,12 +981,27 @@ bx-hover .bx-green-8:hover,
     color: white;
 }
 
+.bx-dark .bx-green-0,
+bx-hover .bx-green-9:hover,
+.bx-green-9.bx-hover:hover {
+    background-color: #052e16;
+    border-color: #022c13;
+    color: white;
+}
+
+/* Color Teal */
+
+.bx-dark bx-hover .bx-teal-9:hover,
+.bx-dark .bx-teal-9.bx-hover:hover,
 .bx-teal-0 {
     background-color: #f0fdfa;
     border-color: #dbe6e4;
     color: black;
 }
 
+.bx-dark bx-hover .bx-teal-8:hover,
+.bx-dark .bx-teal-8.bx-hover:hover,
+.bx-dark .bx-teal-9,
 bx-hover .bx-teal-0:hover,
 .bx-teal-0.bx-hover:hover,
 .bx-teal-1 {
@@ -784,6 +1010,9 @@ bx-hover .bx-teal-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-teal-7:hover,
+.bx-dark .bx-teal-7.bx-hover:hover,
+.bx-dark .bx-teal-8,
 bx-hover .bx-teal-1:hover,
 .bx-teal-1.bx-hover:hover,
 .bx-teal-2 {
@@ -792,6 +1021,9 @@ bx-hover .bx-teal-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-teal-6:hover,
+.bx-dark .bx-teal-6.bx-hover:hover,
+.bx-dark .bx-teal-7,
 bx-hover .bx-teal-2:hover,
 .bx-teal-2.bx-hover:hover,
 .bx-teal-3 {
@@ -800,6 +1032,9 @@ bx-hover .bx-teal-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-teal-5:hover,
+.bx-dark .bx-teal-5.bx-hover:hover,
+.bx-dark .bx-teal-6,
 bx-hover .bx-teal-3:hover,
 .bx-teal-3.bx-hover:hover,
 .bx-teal-4 {
@@ -808,6 +1043,14 @@ bx-hover .bx-teal-3:hover,
     color: black;
 }
 
+.bx-dark teal,
+.bx-dark .bx-text-teal {
+    color: #2dd4bf;
+}
+
+.bx-dark bx-hover .bx-teal-4:hover,
+.bx-dark .bx-teal-4.bx-hover:hover,
+.bx-dark .bx-teal-5,
 bx-hover .bx-teal-4:hover,
 .bx-teal-4.bx-hover:hover,
 .bx-teal-5,
@@ -822,6 +1065,11 @@ teal,
     color: #0d9488;
 }
 
+.bx-dark bx-hover .bx-teal-3:hover,
+.bx-dark .bx-teal-3.bx-hover:hover,
+.bx-dark .bx-teal-4,
+bx-hover .bx-teal:hover,
+.bx-teal.bx-hover:hover,
 bx-hover .bx-teal-5:hover,
 .bx-teal-5.bx-hover:hover,
 .bx-teal-6 {
@@ -830,6 +1078,9 @@ bx-hover .bx-teal-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-teal-2:hover,
+.bx-dark .bx-teal-2.bx-hover:hover,
+.bx-dark .bx-teal-3,
 bx-hover .bx-teal-6:hover,
 .bx-teal-6.bx-hover:hover,
 .bx-teal-7 {
@@ -838,6 +1089,9 @@ bx-hover .bx-teal-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-teal-1:hover,
+.bx-dark .bx-teal-1.bx-hover:hover,
+.bx-dark .bx-teal-2,
 bx-hover .bx-teal-7:hover,
 .bx-teal-7.bx-hover:hover,
 .bx-teal-8 {
@@ -846,6 +1100,9 @@ bx-hover .bx-teal-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-teal-0:hover,
+.bx-dark .bx-teal-0.bx-hover:hover,
+.bx-dark .bx-teal-1,
 bx-hover .bx-teal-8:hover,
 .bx-teal-8.bx-hover:hover,
 .bx-teal-9 {
@@ -854,12 +1111,27 @@ bx-hover .bx-teal-8:hover,
     color: white;
 }
 
+.bx-dark .bx-teal-0,
+bx-hover .bx-teal-9:hover,
+.bx-teal-9.bx-hover:hover {
+    background-color: #042f2e;
+    border-color: #012d2c;
+    color: white;
+}
+
+/* Color Cyan */
+
+.bx-dark bx-hover .bx-cyan-9:hover,
+.bx-dark .bx-cyan-9.bx-hover:hover,
 .bx-cyan-0 {
     background-color: #ecfeff;
     border-color: #e3f4f5;
     color: black;
 }
 
+.bx-dark bx-hover .bx-cyan-8:hover,
+.bx-dark .bx-cyan-8.bx-hover:hover,
+.bx-dark .bx-cyan-9,
 bx-hover .bx-cyan-0:hover,
 .bx-cyan-0.bx-hover:hover,
 .bx-cyan-1 {
@@ -868,6 +1140,9 @@ bx-hover .bx-cyan-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-cyan-7:hover,
+.bx-dark .bx-cyan-7.bx-hover:hover,
+.bx-dark .bx-cyan-8,
 bx-hover .bx-cyan-1:hover,
 .bx-cyan-1.bx-hover:hover,
 .bx-cyan-2 {
@@ -876,6 +1151,9 @@ bx-hover .bx-cyan-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-cyan-6:hover,
+.bx-dark .bx-cyan-6.bx-hover:hover,
+.bx-dark .bx-cyan-7,
 bx-hover .bx-cyan-2:hover,
 .bx-cyan-2.bx-hover:hover,
 .bx-cyan-3 {
@@ -884,6 +1162,9 @@ bx-hover .bx-cyan-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-cyan-5:hover,
+.bx-dark .bx-cyan-5.bx-hover:hover,
+.bx-dark .bx-cyan-6,
 bx-hover .bx-cyan-3:hover,
 .bx-cyan-3.bx-hover:hover,
 .bx-cyan-4 {
@@ -892,6 +1173,14 @@ bx-hover .bx-cyan-3:hover,
     color: black;
 }
 
+.bx-dark cyan,
+.bx-dark .bx-text-cyan {
+    color: #22d3ee;
+}
+
+.bx-dark bx-hover .bx-cyan-4:hover,
+.bx-dark .bx-cyan-4.bx-hover:hover,
+.bx-dark .bx-cyan-5,
 bx-hover .bx-cyan-4:hover,
 .bx-cyan-4.bx-hover:hover,
 .bx-cyan-5,
@@ -906,6 +1195,11 @@ cyan,
     color: #0891b2;
 }
 
+.bx-dark bx-hover .bx-cyan-3:hover,
+.bx-dark .bx-cyan-3.bx-hover:hover,
+.bx-dark .bx-cyan-4,
+bx-hover .bx-cyan:hover,
+.bx-cyan.bx-hover:hover,
 bx-hover .bx-cyan-5:hover,
 .bx-cyan-5.bx-hover:hover,
 .bx-cyan-6 {
@@ -914,6 +1208,9 @@ bx-hover .bx-cyan-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-cyan-2:hover,
+.bx-dark .bx-cyan-2.bx-hover:hover,
+.bx-dark .bx-cyan-3,
 bx-hover .bx-cyan-6:hover,
 .bx-cyan-6.bx-hover:hover,
 .bx-cyan-7 {
@@ -922,6 +1219,9 @@ bx-hover .bx-cyan-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-cyan-1:hover,
+.bx-dark .bx-cyan-1.bx-hover:hover,
+.bx-dark .bx-cyan-2,
 bx-hover .bx-cyan-7:hover,
 .bx-cyan-7.bx-hover:hover,
 .bx-cyan-8 {
@@ -930,6 +1230,9 @@ bx-hover .bx-cyan-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-cyan-0:hover,
+.bx-dark .bx-cyan-0.bx-hover:hover,
+.bx-dark .bx-cyan-1,
 bx-hover .bx-cyan-8:hover,
 .bx-cyan-8.bx-hover:hover,
 .bx-cyan-9 {
@@ -938,12 +1241,27 @@ bx-hover .bx-cyan-8:hover,
     color: white;
 }
 
+.bx-dark .bx-cyan-0,
+bx-hover .bx-cyan-9:hover,
+.bx-cyan-9.bx-hover:hover {
+    background-color: #083344;
+    border-color: #043042;
+    color: white;
+}
+
+/* Color Blue */
+
+.bx-dark bx-hover .bx-blue-9:hover,
+.bx-dark .bx-blue-9.bx-hover:hover,
 .bx-blue-0 {
     background-color: #eff6ff;
     border-color: #e0e6ee;
     color: black;
 }
 
+.bx-dark bx-hover .bx-blue-8:hover,
+.bx-dark .bx-blue-8.bx-hover:hover,
+.bx-dark .bx-blue-9,
 bx-hover .bx-blue-0:hover,
 .bx-blue-0.bx-hover:hover,
 .bx-blue-1 {
@@ -952,6 +1270,9 @@ bx-hover .bx-blue-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-blue-7:hover,
+.bx-dark .bx-blue-7.bx-hover:hover,
+.bx-dark .bx-blue-8,
 bx-hover .bx-blue-1:hover,
 .bx-blue-1.bx-hover:hover,
 .bx-blue-2 {
@@ -960,6 +1281,9 @@ bx-hover .bx-blue-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-blue-6:hover,
+.bx-dark .bx-blue-6.bx-hover:hover,
+.bx-dark .bx-blue-7,
 bx-hover .bx-blue-2:hover,
 .bx-blue-2.bx-hover:hover,
 .bx-blue-3 {
@@ -968,6 +1292,9 @@ bx-hover .bx-blue-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-blue-5:hover,
+.bx-dark .bx-blue-5.bx-hover:hover,
+.bx-dark .bx-blue-6,
 bx-hover .bx-blue-3:hover,
 .bx-blue-3.bx-hover:hover,
 .bx-blue-4 {
@@ -976,6 +1303,14 @@ bx-hover .bx-blue-3:hover,
     color: black;
 }
 
+.bx-dark blue,
+.bx-dark .bx-text-blue {
+    color: #60a5fa;
+}
+
+.bx-dark bx-hover .bx-blue-4:hover,
+.bx-dark .bx-blue-4.bx-hover:hover,
+.bx-dark .bx-blue-5,
 bx-hover .bx-blue-4:hover,
 .bx-blue-4.bx-hover:hover,
 .bx-blue-5,
@@ -990,6 +1325,11 @@ blue,
     color: #2563eb;
 }
 
+.bx-dark bx-hover .bx-blue-3:hover,
+.bx-dark .bx-blue-3.bx-hover:hover,
+.bx-dark .bx-blue-4,
+bx-hover .bx-blue:hover,
+.bx-blue.bx-hover:hover,
 bx-hover .bx-blue-5:hover,
 .bx-blue-5.bx-hover:hover,
 .bx-blue-6 {
@@ -998,6 +1338,9 @@ bx-hover .bx-blue-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-blue-2:hover,
+.bx-dark .bx-blue-2.bx-hover:hover,
+.bx-dark .bx-blue-3,
 bx-hover .bx-blue-6:hover,
 .bx-blue-6.bx-hover:hover,
 .bx-blue-7 {
@@ -1006,6 +1349,9 @@ bx-hover .bx-blue-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-blue-1:hover,
+.bx-dark .bx-blue-1.bx-hover:hover,
+.bx-dark .bx-blue-2,
 bx-hover .bx-blue-7:hover,
 .bx-blue-7.bx-hover:hover,
 .bx-blue-8 {
@@ -1014,6 +1360,9 @@ bx-hover .bx-blue-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-blue-0:hover,
+.bx-dark .bx-blue-0.bx-hover:hover,
+.bx-dark .bx-blue-1,
 bx-hover .bx-blue-8:hover,
 .bx-blue-8.bx-hover:hover,
 .bx-blue-9 {
@@ -1022,12 +1371,27 @@ bx-hover .bx-blue-8:hover,
     color: white;
 }
 
+.bx-dark .bx-blue-0,
+bx-hover .bx-blue-9:hover,
+.bx-blue-9.bx-hover:hover {
+    background-color: #172554;
+    border-color: #142252;
+    color: white;
+}
+
+/* Color Purple */
+
+.bx-dark bx-hover .bx-purple-9:hover,
+.bx-dark .bx-purple-9.bx-hover:hover,
 .bx-purple-0 {
     background-color: #faf5ff;
     border-color: #e4dfe8;
     color: black;
 }
 
+.bx-dark bx-hover .bx-purple-8:hover,
+.bx-dark .bx-purple-8.bx-hover:hover,
+.bx-dark .bx-purple-9,
 bx-hover .bx-purple-0:hover,
 .bx-purple-0.bx-hover:hover,
 .bx-purple-1 {
@@ -1036,6 +1400,9 @@ bx-hover .bx-purple-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-purple-7:hover,
+.bx-dark .bx-purple-7.bx-hover:hover,
+.bx-dark .bx-purple-8,
 bx-hover .bx-purple-1:hover,
 .bx-purple-1.bx-hover:hover,
 .bx-purple-2 {
@@ -1044,6 +1411,9 @@ bx-hover .bx-purple-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-purple-6:hover,
+.bx-dark .bx-purple-6.bx-hover:hover,
+.bx-dark .bx-purple-7,
 bx-hover .bx-purple-2:hover,
 .bx-purple-2.bx-hover:hover,
 .bx-purple-3 {
@@ -1052,6 +1422,9 @@ bx-hover .bx-purple-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-purple-5:hover,
+.bx-dark .bx-purple-5.bx-hover:hover,
+.bx-dark .bx-purple-6,
 bx-hover .bx-purple-3:hover,
 .bx-purple-3.bx-hover:hover,
 .bx-purple-4 {
@@ -1060,6 +1433,15 @@ bx-hover .bx-purple-3:hover,
     color: black;
 }
 
+.bx-dark bx-tag,
+.bx-dark purple,
+.bx-dark .bx-text-purple {
+    color: #c084fc;
+}
+
+.bx-dark bx-hover .bx-purple-4:hover,
+.bx-dark .bx-purple-4.bx-hover:hover,
+.bx-dark .bx-purple-5,
 bx-hover .bx-purple-4:hover,
 .bx-purple-4.bx-hover:hover,
 .bx-purple-5,
@@ -1069,11 +1451,17 @@ bx-hover .bx-purple-4:hover,
     color: white;
 }
 
+bx-tag,
 purple,
 .bx-text-purple {
     color: #9333ea;
 }
 
+.bx-dark bx-hover .bx-purple-3:hover,
+.bx-dark .bx-purple-3.bx-hover:hover,
+.bx-dark .bx-purple-4,
+bx-hover .bx-purple:hover,
+.bx-purple.bx-hover:hover,
 bx-hover .bx-purple-5:hover,
 .bx-purple-5.bx-hover:hover,
 .bx-purple-6 {
@@ -1082,6 +1470,9 @@ bx-hover .bx-purple-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-purple-2:hover,
+.bx-dark .bx-purple-2.bx-hover:hover,
+.bx-dark .bx-purple-3,
 bx-hover .bx-purple-6:hover,
 .bx-purple-6.bx-hover:hover,
 .bx-purple-7 {
@@ -1090,6 +1481,9 @@ bx-hover .bx-purple-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-purple-1:hover,
+.bx-dark .bx-purple-1.bx-hover:hover,
+.bx-dark .bx-purple-2,
 bx-hover .bx-purple-7:hover,
 .bx-purple-7.bx-hover:hover,
 .bx-purple-8 {
@@ -1098,6 +1492,9 @@ bx-hover .bx-purple-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-purple-0:hover,
+.bx-dark .bx-purple-0.bx-hover:hover,
+.bx-dark .bx-purple-1,
 bx-hover .bx-purple-8:hover,
 .bx-purple-8.bx-hover:hover,
 .bx-purple-9 {
@@ -1106,12 +1503,27 @@ bx-hover .bx-purple-8:hover,
     color: white;
 }
 
+.bx-dark .bx-purple-0,
+bx-hover .bx-purple-9:hover,
+.bx-purple-9.bx-hover:hover {
+    background-color: #3b0764;
+    border-color: #390261;
+    color: white;
+}
+
+/* Color Fuchsia */
+
+.bx-dark bx-hover .bx-fuchsia-9:hover,
+.bx-dark .bx-fuchsia-9.bx-hover:hover,
 .bx-fuchsia-0 {
     background-color: #fdf4ff;
     border-color: #ece4ee;
     color: black;
 }
 
+.bx-dark bx-hover .bx-fuchsia-8:hover,
+.bx-dark .bx-fuchsia-8.bx-hover:hover,
+.bx-dark .bx-fuchsia-9,
 bx-hover .bx-fuchsia-0:hover,
 .bx-fuchsia-0.bx-hover:hover,
 .bx-fuchsia-1 {
@@ -1120,6 +1532,9 @@ bx-hover .bx-fuchsia-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-fuchsia-7:hover,
+.bx-dark .bx-fuchsia-7.bx-hover:hover,
+.bx-dark .bx-fuchsia-8,
 bx-hover .bx-fuchsia-1:hover,
 .bx-fuchsia-1.bx-hover:hover,
 .bx-fuchsia-2 {
@@ -1128,6 +1543,9 @@ bx-hover .bx-fuchsia-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-fuchsia-6:hover,
+.bx-dark .bx-fuchsia-6.bx-hover:hover,
+.bx-dark .bx-fuchsia-7,
 bx-hover .bx-fuchsia-2:hover,
 .bx-fuchsia-2.bx-hover:hover,
 .bx-fuchsia-3 {
@@ -1136,6 +1554,9 @@ bx-hover .bx-fuchsia-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-fuchsia-5:hover,
+.bx-dark .bx-fuchsia-5.bx-hover:hover,
+.bx-dark .bx-fuchsia-6,
 bx-hover .bx-fuchsia-3:hover,
 .bx-fuchsia-3.bx-hover:hover,
 .bx-fuchsia-4 {
@@ -1144,6 +1565,14 @@ bx-hover .bx-fuchsia-3:hover,
     color: black;
 }
 
+.bx-dark fuchsia,
+.bx-dark .bx-text-fuchsia {
+    color: #e879f9;
+}
+
+.bx-dark bx-hover .bx-fuchsia-4:hover,
+.bx-dark .bx-fuchsia-4.bx-hover:hover,
+.bx-dark .bx-fuchsia-5,
 bx-hover .bx-fuchsia-4:hover,
 .bx-fuchsia-4.bx-hover:hover,
 .bx-fuchsia-5,
@@ -1158,6 +1587,11 @@ fuchsia,
     color: #c026d3;
 }
 
+.bx-dark bx-hover .bx-fuchsia-3:hover,
+.bx-dark .bx-fuchsia-3.bx-hover:hover,
+.bx-dark .bx-fuchsia-4,
+bx-hover .bx-fuchsia:hover,
+.bx-fuchsia.bx-hover:hover,
 bx-hover .bx-fuchsia-5:hover,
 .bx-fuchsia-5.bx-hover:hover,
 .bx-fuchsia-6 {
@@ -1166,6 +1600,9 @@ bx-hover .bx-fuchsia-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-fuchsia-2:hover,
+.bx-dark .bx-fuchsia-2.bx-hover:hover,
+.bx-dark .bx-fuchsia-3,
 bx-hover .bx-fuchsia-6:hover,
 .bx-fuchsia-6.bx-hover:hover,
 .bx-fuchsia-7 {
@@ -1174,6 +1611,9 @@ bx-hover .bx-fuchsia-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-fuchsia-1:hover,
+.bx-dark .bx-fuchsia-1.bx-hover:hover,
+.bx-dark .bx-fuchsia-2,
 bx-hover .bx-fuchsia-7:hover,
 .bx-fuchsia-7.bx-hover:hover,
 .bx-fuchsia-8 {
@@ -1182,6 +1622,9 @@ bx-hover .bx-fuchsia-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-fuchsia-0:hover,
+.bx-dark .bx-fuchsia-0.bx-hover:hover,
+.bx-dark .bx-fuchsia-1,
 bx-hover .bx-fuchsia-8:hover,
 .bx-fuchsia-8.bx-hover:hover,
 .bx-fuchsia-9 {
@@ -1190,12 +1633,27 @@ bx-hover .bx-fuchsia-8:hover,
     color: white;
 }
 
+.bx-dark .bx-fuchsia-0,
+bx-hover .bx-fuchsia-9:hover,
+.bx-fuchsia-9.bx-hover:hover {
+    background-color: #4a044e;
+    border-color: #48004b;
+    color: white;
+}
+
+/* Color Pink */
+
+.bx-dark bx-hover .bx-pink-9:hover,
+.bx-dark .bx-pink-9.bx-hover:hover,
 .bx-pink-0 {
     background-color: #fdf2f8;
     border-color: #e6dce2;
     color: black;
 }
 
+.bx-dark bx-hover .bx-pink-8:hover,
+.bx-dark .bx-pink-8.bx-hover:hover,
+.bx-dark .bx-pink-9,
 bx-hover .bx-pink-0:hover,
 .bx-pink-0.bx-hover:hover,
 .bx-pink-1 {
@@ -1204,6 +1662,9 @@ bx-hover .bx-pink-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-pink-7:hover,
+.bx-dark .bx-pink-7.bx-hover:hover,
+.bx-dark .bx-pink-8,
 bx-hover .bx-pink-1:hover,
 .bx-pink-1.bx-hover:hover,
 .bx-pink-2 {
@@ -1212,6 +1673,9 @@ bx-hover .bx-pink-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-pink-6:hover,
+.bx-dark .bx-pink-6.bx-hover:hover,
+.bx-dark .bx-pink-7,
 bx-hover .bx-pink-2:hover,
 .bx-pink-2.bx-hover:hover,
 .bx-pink-3 {
@@ -1220,6 +1684,9 @@ bx-hover .bx-pink-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-pink-5:hover,
+.bx-dark .bx-pink-5.bx-hover:hover,
+.bx-dark .bx-pink-6,
 bx-hover .bx-pink-3:hover,
 .bx-pink-3.bx-hover:hover,
 .bx-pink-4 {
@@ -1228,6 +1695,14 @@ bx-hover .bx-pink-3:hover,
     color: black;
 }
 
+.bx-dark pink,
+.bx-dark .bx-text-pink {
+    color: #f472b6;
+}
+
+.bx-dark bx-hover .bx-pink-4:hover,
+.bx-dark .bx-pink-4.bx-hover:hover,
+.bx-dark .bx-pink-5,
 bx-hover .bx-pink-4:hover,
 .bx-pink-4.bx-hover:hover,
 .bx-pink-5,
@@ -1242,6 +1717,11 @@ pink,
     color: #db2777;
 }
 
+.bx-dark bx-hover .bx-pink-3:hover,
+.bx-dark .bx-pink-3.bx-hover:hover,
+.bx-dark .bx-pink-4,
+bx-hover .bx-pink:hover,
+.bx-pink.bx-hover:hover,
 bx-hover .bx-pink-5:hover,
 .bx-pink-5.bx-hover:hover,
 .bx-pink-6 {
@@ -1250,6 +1730,9 @@ bx-hover .bx-pink-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-pink-2:hover,
+.bx-dark .bx-pink-2.bx-hover:hover,
+.bx-dark .bx-pink-3,
 bx-hover .bx-pink-6:hover,
 .bx-pink-6.bx-hover:hover,
 .bx-pink-7 {
@@ -1258,6 +1741,9 @@ bx-hover .bx-pink-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-pink-1:hover,
+.bx-dark .bx-pink-1.bx-hover:hover,
+.bx-dark .bx-pink-2,
 bx-hover .bx-pink-7:hover,
 .bx-pink-7.bx-hover:hover,
 .bx-pink-8 {
@@ -1266,6 +1752,9 @@ bx-hover .bx-pink-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-pink-0:hover,
+.bx-dark .bx-pink-0.bx-hover:hover,
+.bx-dark .bx-pink-1,
 bx-hover .bx-pink-8:hover,
 .bx-pink-8.bx-hover:hover,
 .bx-pink-9 {
@@ -1274,12 +1763,27 @@ bx-hover .bx-pink-8:hover,
     color: white;
 }
 
+.bx-dark .bx-pink-0,
+bx-hover .bx-pink-9:hover,
+.bx-pink-9.bx-hover:hover {
+    background-color: #500724;
+    border-color: #4d0322;
+    color: white;
+}
+
+/* Color Gray */
+
+.bx-dark bx-hover .bx-gray-9:hover,
+.bx-dark .bx-gray-9.bx-hover:hover,
 .bx-gray-0 {
     background-color: #f9fafb;
     border-color: #e3e4e5;
     color: black;
 }
 
+.bx-dark bx-hover .bx-gray-8:hover,
+.bx-dark .bx-gray-8.bx-hover:hover,
+.bx-dark .bx-gray-9,
 bx-hover .bx-gray-0:hover,
 .bx-gray-0.bx-hover:hover,
 .bx-gray-1 {
@@ -1288,6 +1792,9 @@ bx-hover .bx-gray-0:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-gray-7:hover,
+.bx-dark .bx-gray-7.bx-hover:hover,
+.bx-dark .bx-gray-8,
 bx-hover .bx-gray-1:hover,
 .bx-gray-1.bx-hover:hover,
 .bx-gray-2 {
@@ -1296,6 +1803,9 @@ bx-hover .bx-gray-1:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-gray-6:hover,
+.bx-dark .bx-gray-6.bx-hover:hover,
+.bx-dark .bx-gray-7,
 bx-hover .bx-gray-2:hover,
 .bx-gray-2.bx-hover:hover,
 .bx-gray-3 {
@@ -1304,6 +1814,9 @@ bx-hover .bx-gray-2:hover,
     color: black;
 }
 
+.bx-dark bx-hover .bx-gray-5:hover,
+.bx-dark .bx-gray-5.bx-hover:hover,
+.bx-dark .bx-gray-6,
 bx-hover .bx-gray-3:hover,
 .bx-gray-3.bx-hover:hover,
 .bx-gray-4 {
@@ -1312,6 +1825,14 @@ bx-hover .bx-gray-3:hover,
     color: black;
 }
 
+.bx-dark gray,
+.bx-dark .bx-text-gray {
+    color: #9ca3af;
+}
+
+.bx-dark bx-hover .bx-gray-4:hover,
+.bx-dark .bx-gray-4.bx-hover:hover,
+.bx-dark .bx-gray-5,
 bx-hover .bx-gray-4:hover,
 .bx-gray-4.bx-hover:hover,
 .bx-gray-5,
@@ -1326,6 +1847,11 @@ gray,
     color: #4b5563;
 }
 
+.bx-dark bx-hover .bx-gray-3:hover,
+.bx-dark .bx-gray-3.bx-hover:hover,
+.bx-dark .bx-gray-4,
+bx-hover .bx-gray:hover,
+.bx-gray.bx-hover:hover,
 bx-hover .bx-gray-5:hover,
 .bx-gray-5.bx-hover:hover,
 .bx-gray-6 {
@@ -1334,6 +1860,9 @@ bx-hover .bx-gray-5:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-gray-2:hover,
+.bx-dark .bx-gray-2.bx-hover:hover,
+.bx-dark .bx-gray-3,
 bx-hover .bx-gray-6:hover,
 .bx-gray-6.bx-hover:hover,
 .bx-gray-7 {
@@ -1342,6 +1871,9 @@ bx-hover .bx-gray-6:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-gray-1:hover,
+.bx-dark .bx-gray-1.bx-hover:hover,
+.bx-dark .bx-gray-2,
 bx-hover .bx-gray-7:hover,
 .bx-gray-7.bx-hover:hover,
 .bx-gray-8 {
@@ -1350,6 +1882,9 @@ bx-hover .bx-gray-7:hover,
     color: white;
 }
 
+.bx-dark bx-hover .bx-gray-0:hover,
+.bx-dark .bx-gray-0.bx-hover:hover,
+.bx-dark .bx-gray-1,
 bx-hover .bx-gray-8:hover,
 .bx-gray-8.bx-hover:hover,
 .bx-gray-9 {
@@ -1357,6 +1892,16 @@ bx-hover .bx-gray-8:hover,
     border-color: #2c333f;
     color: white;
 }
+
+.bx-dark .bx-gray-0,
+bx-hover .bx-gray-9:hover,
+.bx-gray-9.bx-hover:hover {
+    background-color: #030712;
+    border-color: #020611;
+    color: white;
+}
+
+/* Color White */
 
 .bx-white {
     background-color: white;
@@ -1374,6 +1919,7 @@ white,
     color: white;
 }
 
+.bx-dark,
 .bx-black {
     background-color: black;
     border-color: #030712;
@@ -1434,6 +1980,18 @@ black,
     border: 0;
     color: gray;
 } */
+
+bx-tag {
+    font-family: monospace;
+}
+
+bx-tag:before {
+    content: '<';
+}
+
+bx-tag:after {
+    content: '>';
+}
 
 .bx-spacer {
     width: 1px;
