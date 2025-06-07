@@ -23,8 +23,12 @@
     <style>
         body {
             padding: 12px;
-            font-family: Consolas, "Courier New", monospace;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             font-size: 14px;
+        }
+
+        code {
+            font-family: Consolas, "Courier New", monospace;
         }
 
         bx-float,
@@ -48,12 +52,20 @@
         }
 
         .colors-table td {
-            padding: 3px;
+            text-align: center;
         }
 
-        /* .colors-table tr>td:first-child {
-            white-space: nowrap;
-        } */
+        .colors-table .bx-ratio-1-1 {
+            max-width: 40px;
+            /* width: 40px; */
+            display: inline-block;
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
     </style>
 </head>
 
@@ -66,7 +78,7 @@
     </h2>
     <p>
         The Barfix grid system is simple and easy to learn. It is fully responsive using CSS floats. Any container with
-        the class <blue><code>".bx-float"</code></blue> works as a floatable container, and you set the widths of child
+        the class <blue><code>"bx-float"</code></blue> works as a floatable container, and you set the widths of child
         elements by applying the
         appropriate column width classes.
     </p>
@@ -98,14 +110,17 @@
     </bx-hover>
 
     <p>
-        <strong>Hint:</strong> The class <blue><code>".bx-sm-2-5"</code></blue> sets the width of an element to 2/5 of
+        <strong>Hint:</strong> The class <blue><code>"bx-sm-2-5"</code></blue> sets the width of an element to 2/5 of
         the container when the viewport is at least the "small" breakpoint.
     </p>
-
-    <p>Also we have a "<blue>bx-table</blue>"
-        class for any container to behave its children as table-cell. Size the cells by setting "<blue>bx-w-1</blue>" to
-        "<blue>bx-w-25</blue>";
-        The number (1..25) indicates weight of each cell rather than others.</p>
+    <p>
+        There is also a <blue><code>"bx-table"</code></blue> class that makes the container behave like a table row,
+        with children as table cells.
+        You can assign relative widths to cells using classes <blue><code>"bx-w-1"</code></blue> to <blue>
+            <code>"bx-w-25"</code>
+        </blue>. The numbers define the weight
+        (proportion) of each cell relative to its siblings.
+    </p>
 
     <bx-tag>div <red>class</red>=<blue>"bx-table"</blue></bx-tag> or <bx-tag>bx-table</bx-tag>
     <bx-hover>
@@ -125,11 +140,13 @@
     </bx-hover>
 
     <h2>
-        Place it, where ever you want
+        Positioning
     </h2>
-    <p>There are also positioning classes for nine different positions of a box. Just be carefull about container's
-        width,
-        height and position.</p>
+    <p>Use Barfix's positioning classes to place elements in one of nine positions inside a container. Try classes like
+        <blue><code>bx-top-left</code></blue>, <blue><code>bx-middle-center</code></blue>, or <blue>
+            <code>bx-bottom-right</code>
+        </blue>.
+    </p>
 
     <div class="bx-relative bx-yellow-0 margin-bottom-20" style="height: 240px">
         <bx-hover>
@@ -166,10 +183,11 @@
     </div>
 
     <h2>
-        Shape it, how ever you want
+        Aspect Ratio
     </h2>
-    <p>The ratio system allows you to set the size of images (or any content) to specific aspect ratios. This is
-        especially useful for image layout pages, like Instagram.</p>
+    <p>Barfix includes a ratio system so you can set the aspect ratio of any element (like images) easily. This is
+        especially useful for image layouts similar to Instagram.</p>
+
     <div class="bx-float bx-blue-0 bx-border bx-text-white margin-bottom-20">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
@@ -188,760 +206,786 @@
         </div>
     </div>
 
-    <h2>Color it, like a colorist</h2>
+    <h2>Color Palette</h2>
+    <p>Barfix features a vibrant color palette inspired by Tailwind CSS. It includes 12 main colors, each with 10 shades
+        (numbered 0–9), plus black and white.</p>
+    <p>Use the class naming convention <blue><code>"bx-{color}-{shade}"</code></blue>, for example <blue>
+            <code>"bx-red-5"</code>
+        </blue> or <blue><code>"bx-blue-3"</code></blue>. Shade 5 is the default in light mode,
+        while shade 4 is default in dark mode.</p>
+    <p>You can apply these colors to backgrounds, text, borders, or hover states simply using the appropriate classes:
+    </p>
+    <ul>
+        <li>Set text color using <blue><code>"bx-text-{color}"</code></blue> or use the custom tags like
+            <code><bx-tag>red</bx-tag></code>,
+            <code><bx-tag>blue</bx-tag></code>.
+        </li>
+        <li>Add borders using the <blue><code>"bx-border"</code></blue> class or use
+            <code><bx-tag>bx-border</bx-tag></code> tag to set that for
+            all inner elements.
+        </li>
+        <li>Enable hover color effects with <blue><code>"bx-hover"</code></blue> class or use
+            <code><bx-tag>bx-hover</bx-tag></code> tag to set that for
+            all inner elements.
+        </li>
+        <li>Activate dark mode by adding <blue><code>"bx-dark"</code></blue> to a parent element.</li>
+    </ul>
+    <h3>Color Shades Table</h3>
     <bx-border>
         <bx-hover>
-            <bx-float>
-                <div class="bx-lg-9-12 bx-xxl-7-12" style="padding: 0;">
-                    <table class="colors-table bx-1-1">
-                        <tbody>
-                            <tr>
-                                <td class="bx-2-12">
-                                    <red>.bx-red</red>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td class="bx-1-12">
-                                    <div class="bx-ratio-1-1 bx-red-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <orange>.bx-orange</orange>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-orange-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <yellow>.bx-yellow</yellow>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-yellow-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <lime>.bx-lime</lime>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-lime-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <green>.bx-green</green>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-green-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <teal>.bx-teal</teal>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-teal-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <cyan>.bx-cyan</cyan>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-cyan-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <blue>.bx-blue</blue>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-blue-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <purple>.bx-purple</purple>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-purple-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <fuchsia>.bx-fuchsia</fuchsia>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-fuchsia-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <pink>.bx-pink</pink>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-pink-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <gray>.bx-gray</gray>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-0">
-                                        <span class="bx-middle-center">0</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-1">
-                                        <span class="bx-middle-center">1</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-2">
-                                        <span class="bx-middle-center">2</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-3">
-                                        <span class="bx-middle-center">3</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-4">
-                                        <span class="bx-middle-center">4</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-5">
-                                        <span class="bx-middle-center">5</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-6">
-                                        <span class="bx-middle-center">6</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-7">
-                                        <span class="bx-middle-center">7</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-8">
-                                        <span class="bx-middle-center">8</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="bx-ratio-1-1 bx-gray-9">
-                                        <span class="bx-middle-center">9</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="5">
-                                    <div class="bx-black" style="padding: 15px;">
-                                        .bx-black
-                                    </div>
-                                </td>
-                                <td colspan="5">
-                                    <div class="bx-white" style="padding: 15px;">
-                                        .bx-white
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="bx-lg-9-12 bx-xxl-5-12">
-                    <p>Inspired by Tailwind color palette, we have 12 main colors, with 10 shades; plus Black and White
-                        (with no shade).
-                    <h3>
-                        How to use
-                    </h3>
-                    <p>
-                        <bx-tag>div <red>class</red>=<blue>"bx-{color}-{shade}"</blue></bx-tag>
-                    </p>
-                    <p>
-                        Shade No.5 is default in light mode, and it's No.4 in dark mode.
-                    </p>
-                    <p>
-                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-red-5"</blue></bx-tag>
-                        <br>
-                        Equal to: <bx-tag>div <red>class</red>=<blue>"bx-red"</blue></bx-tag>
-                    </p>
-                    <h3>
-                        Text color
-                    </h3>
-                    <p>
-                        You can set all colors as text color of an element:
-                    </p>
-                    <p>
-                        <bx-tag>span <red>class</red>=<blue>"bx-text-{color}"</blue></bx-tag> or
-                        <bx-tag>{color}</bx-tag>
-                    </p>
-                    <p>
-                        Such as: <bx-tag>span <red>class</red>=<blue>"bx-text-pink"</blue></bx-tag>
-                        <pink>It's pink</pink><bx-tag>/span</bx-tag>
-                        <br>
-                        Equal to: <bx-tag>pink</bx-tag>
-                        <pink>It's pink</pink><bx-tag>/pink</bx-tag>
-                    </p>
-                    <h3>
-                        Border color?
-                    </h3>
-                    <p>
-                        Yes, just set "<blue>bx-border</blue>" class or use <bx-tag>bx-border</bx-tag> tag to set that
-                        for all inner elements:
-                    </p>
-                    <p>
-                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-lime-2 bx-border"</blue></bx-tag>
-                        <br>
-                        Or: <bx-tag>bx-border</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-lime-2"</blue>
-                        </bx-tag>...<bx-tag>/bx-border</bx-tag>
-                    </p>
-                    <h3>
-                        Hover color?
-                    </h3>
-                    <p>
-                        Yes, just set "<blue>bx-hover</blue>" class or use <bx-tag>bx-hover</bx-tag> tag to set that for
-                        all inner elements:
-                    </p>
-                    <p>
-                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-cyan-6 bx-hover"</blue></bx-tag>
-                        <br>
-                        Or: <bx-tag>bx-hover</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-cyan-6"</blue>
-                        </bx-tag>...<bx-tag>/bx-hover</bx-tag>
-                    </p>
-                    <h3>
-                        Dark mode?
-                    </h3>
-                    <p>
-                        Yes, just set "<blue>bx-dark</blue>" class to an outer element:
-                    </p>
-                    <p>
-                        Such as: <bx-tag>body <red>class</red>=<blue>"bx-dark"</blue></bx-tag>
-                    </p>
-                </div>
-            </bx-float>
+            <table class="colors-table bx-1-1">
+                <thead class="bx-blue">
+                    <tr>
+                        <th>Color</th>
+                        <th colspan="10">Shades</th>
+                    </tr>
+                </thead>
+                <tbody class="bx-gray-0">
+                    <tr>
+                        <td class="bx-w-1">
+                            <red>red</red>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td class="bx-w-1">
+                            <div class="bx-ratio-1-1 bx-red-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <orange>orange</orange>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-orange-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <yellow>yellow</yellow>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-yellow-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lime>lime</lime>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-lime-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <green>green</green>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-green-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <teal>teal</teal>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-teal-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <cyan>cyan</cyan>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-cyan-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <blue>blue</blue>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-blue-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <purple>purple</purple>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-purple-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <fuchsia>fuchsia</fuchsia>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-fuchsia-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pink>pink</pink>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-pink-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <gray>gray</gray>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-0">
+                                <span class="bx-middle-center">0</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-1">
+                                <span class="bx-middle-center">1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-2">
+                                <span class="bx-middle-center">2</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-3">
+                                <span class="bx-middle-center">3</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-4">
+                                <span class="bx-middle-center">4</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-5">
+                                <span class="bx-middle-center">5</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-6">
+                                <span class="bx-middle-center">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-7">
+                                <span class="bx-middle-center">7</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-8">
+                                <span class="bx-middle-center">8</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="bx-ratio-1-1 bx-gray-9">
+                                <span class="bx-middle-center">9</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>b&w</td>
+                        <td colspan="5">
+                            <div class="bx-black" style="padding: 12px;">
+                                .bx-black
+                            </div>
+                        </td>
+                        <td colspan="5">
+                            <div class="bx-white" style="padding: 12px;">
+                                .bx-white
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="bx-lg-9-12 bx-xxl-5-12">
+                <p>Inspired by Tailwind color palette, we have 12 main colors, with 10 shades; plus Black and White
+                    (with no shade).
+                <h3>
+                    How to use
+                </h3>
+                <p>
+                    <bx-tag>div <red>class</red>=<blue>"bx-{color}-{shade}"</blue></bx-tag>
+                </p>
+                <p>
+                    Shade No.5 is default in light mode, and it's No.4 in dark mode.
+                </p>
+                <p>
+                    Such as: <bx-tag>div <red>class</red>=<blue>"bx-red-5"</blue></bx-tag>
+                    <br>
+                    Equal to: <bx-tag>div <red>class</red>=<blue>"bx-red"</blue></bx-tag>
+                </p>
+                <h3>
+                    Text color
+                </h3>
+                <p>
+                    You can set all colors as text color of an element:
+                </p>
+                <p>
+                    <bx-tag>span <red>class</red>=<blue>"bx-text-{color}"</blue></bx-tag> or
+                    <bx-tag>{color}</bx-tag>
+                </p>
+                <p>
+                    Such as: <bx-tag>span <red>class</red>=<blue>"bx-text-pink"</blue></bx-tag>
+                    <pink>It's pink</pink><bx-tag>/span</bx-tag>
+                    <br>
+                    Equal to: <bx-tag>pink</bx-tag>
+                    <pink>It's pink</pink><bx-tag>/pink</bx-tag>
+                </p>
+                <h3>
+                    Border color?
+                </h3>
+                <p>
+                    Yes, just set "<blue>bx-border</blue>" class or use <bx-tag>bx-border</bx-tag> tag to set that
+                    for all inner elements:
+                </p>
+                <p>
+                    Such as: <bx-tag>div <red>class</red>=<blue>"bx-lime-2 bx-border"</blue></bx-tag>
+                    <br>
+                    Or: <bx-tag>bx-border</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-lime-2"</blue>
+                    </bx-tag>...<bx-tag>/bx-border</bx-tag>
+                </p>
+                <h3>
+                    Hover color?
+                </h3>
+                <p>
+                    Yes, just set "<blue>bx-hover</blue>" class or use <bx-tag>bx-hover</bx-tag> tag to set that for
+                    all inner elements:
+                </p>
+                <p>
+                    Such as: <bx-tag>div <red>class</red>=<blue>"bx-cyan-6 bx-hover"</blue></bx-tag>
+                    <br>
+                    Or: <bx-tag>bx-hover</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-cyan-6"</blue>
+                    </bx-tag>...<bx-tag>/bx-hover</bx-tag>
+                </p>
+                <h3>
+                    Dark mode?
+                </h3>
+                <p>
+                    Yes, just set "<blue>bx-dark</blue>" class to an outer element:
+                </p>
+                <p>
+                    Such as: <bx-tag>body <red>class</red>=<blue>"bx-dark"</blue></bx-tag>
+                </p>
+            </div> -->
         </bx-hover>
     </bx-border>
 </body>
