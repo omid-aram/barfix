@@ -273,6 +273,7 @@ bx-table>*,
 }
 
 .bx-middle-left,
+.bx-middle-start,
 .bx-ltr .bx-middle-start,
 .bx-rtl .bx-middle-end {
     position: absolute;
@@ -284,6 +285,7 @@ bx-table>*,
 }
 
 .bx-middle-right,
+.bx-middle-end,
 .bx-ltr .bx-middle-end,
 .bx-rtl .bx-middle-start {
     position: absolute;
@@ -528,6 +530,8 @@ bx-hover .bx-orange-3:hover,
     color: #fb923c;
 }
 
+.bx-dark bx-hover .bx-orange:hover,
+.bx-dark .bx-orange.bx-hover:hover,
 .bx-dark bx-hover .bx-orange-4:hover,
 .bx-dark .bx-orange-4.bx-hover:hover,
 .bx-dark .bx-orange-5,
@@ -548,6 +552,7 @@ orange,
 .bx-dark bx-hover .bx-orange-3:hover,
 .bx-dark .bx-orange-3.bx-hover:hover,
 .bx-dark .bx-orange-4,
+.bx-dark .bx-orange,
 bx-hover .bx-orange:hover,
 .bx-orange.bx-hover:hover,
 bx-hover .bx-orange-5:hover,
@@ -658,6 +663,8 @@ bx-hover .bx-yellow-3:hover,
     color: #facc15;
 }
 
+.bx-dark bx-hover .bx-yellow:hover,
+.bx-dark .bx-yellow.bx-hover:hover,
 .bx-dark bx-hover .bx-yellow-4:hover,
 .bx-dark .bx-yellow-4.bx-hover:hover,
 .bx-dark .bx-yellow-5,
@@ -678,6 +685,7 @@ yellow,
 .bx-dark bx-hover .bx-yellow-3:hover,
 .bx-dark .bx-yellow-3.bx-hover:hover,
 .bx-dark .bx-yellow-4,
+.bx-dark .bx-yellow,
 bx-hover .bx-yellow:hover,
 .bx-yellow.bx-hover:hover,
 bx-hover .bx-yellow-5:hover,
@@ -788,6 +796,8 @@ bx-hover .bx-lime-3:hover,
     color: #a3e635;
 }
 
+.bx-dark bx-hover .bx-lime:hover,
+.bx-dark .bx-lime.bx-hover:hover,
 .bx-dark bx-hover .bx-lime-4:hover,
 .bx-dark .bx-lime-4.bx-hover:hover,
 .bx-dark .bx-lime-5,
@@ -808,6 +818,7 @@ lime,
 .bx-dark bx-hover .bx-lime-3:hover,
 .bx-dark .bx-lime-3.bx-hover:hover,
 .bx-dark .bx-lime-4,
+.bx-dark .bx-lime,
 bx-hover .bx-lime:hover,
 .bx-lime.bx-hover:hover,
 bx-hover .bx-lime-5:hover,
@@ -918,6 +929,8 @@ bx-hover .bx-green-3:hover,
     color: #4ade80;
 }
 
+.bx-dark bx-hover .bx-green:hover,
+.bx-dark .bx-green.bx-hover:hover,
 .bx-dark bx-hover .bx-green-4:hover,
 .bx-dark .bx-green-4.bx-hover:hover,
 .bx-dark .bx-green-5,
@@ -938,6 +951,7 @@ green,
 .bx-dark bx-hover .bx-green-3:hover,
 .bx-dark .bx-green-3.bx-hover:hover,
 .bx-dark .bx-green-4,
+.bx-dark .bx-green,
 bx-hover .bx-green:hover,
 .bx-green.bx-hover:hover,
 bx-hover .bx-green-5:hover,
@@ -1048,6 +1062,8 @@ bx-hover .bx-teal-3:hover,
     color: #2dd4bf;
 }
 
+.bx-dark bx-hover .bx-teal:hover,
+.bx-dark .bx-teal.bx-hover:hover,
 .bx-dark bx-hover .bx-teal-4:hover,
 .bx-dark .bx-teal-4.bx-hover:hover,
 .bx-dark .bx-teal-5,
@@ -1068,6 +1084,7 @@ teal,
 .bx-dark bx-hover .bx-teal-3:hover,
 .bx-dark .bx-teal-3.bx-hover:hover,
 .bx-dark .bx-teal-4,
+.bx-dark .bx-teal,
 bx-hover .bx-teal:hover,
 .bx-teal.bx-hover:hover,
 bx-hover .bx-teal-5:hover,
@@ -1178,6 +1195,8 @@ bx-hover .bx-cyan-3:hover,
     color: #22d3ee;
 }
 
+.bx-dark bx-hover .bx-cyan:hover,
+.bx-dark .bx-cyan.bx-hover:hover,
 .bx-dark bx-hover .bx-cyan-4:hover,
 .bx-dark .bx-cyan-4.bx-hover:hover,
 .bx-dark .bx-cyan-5,
@@ -1198,6 +1217,7 @@ cyan,
 .bx-dark bx-hover .bx-cyan-3:hover,
 .bx-dark .bx-cyan-3.bx-hover:hover,
 .bx-dark .bx-cyan-4,
+.bx-dark .bx-cyan,
 bx-hover .bx-cyan:hover,
 .bx-cyan.bx-hover:hover,
 bx-hover .bx-cyan-5:hover,
@@ -1308,6 +1328,8 @@ bx-hover .bx-blue-3:hover,
     color: #60a5fa;
 }
 
+.bx-dark bx-hover .bx-blue:hover,
+.bx-dark .bx-blue.bx-hover:hover,
 .bx-dark bx-hover .bx-blue-4:hover,
 .bx-dark .bx-blue-4.bx-hover:hover,
 .bx-dark .bx-blue-5,
@@ -1328,6 +1350,7 @@ blue,
 .bx-dark bx-hover .bx-blue-3:hover,
 .bx-dark .bx-blue-3.bx-hover:hover,
 .bx-dark .bx-blue-4,
+.bx-dark .bx-blue,
 bx-hover .bx-blue:hover,
 .bx-blue.bx-hover:hover,
 bx-hover .bx-blue-5:hover,
@@ -1439,6 +1462,8 @@ bx-hover .bx-purple-3:hover,
     color: #c084fc;
 }
 
+.bx-dark bx-hover .bx-purple:hover,
+.bx-dark .bx-purple.bx-hover:hover,
 .bx-dark bx-hover .bx-purple-4:hover,
 .bx-dark .bx-purple-4.bx-hover:hover,
 .bx-dark .bx-purple-5,
@@ -1460,6 +1485,7 @@ purple,
 .bx-dark bx-hover .bx-purple-3:hover,
 .bx-dark .bx-purple-3.bx-hover:hover,
 .bx-dark .bx-purple-4,
+.bx-dark .bx-purple,
 bx-hover .bx-purple:hover,
 .bx-purple.bx-hover:hover,
 bx-hover .bx-purple-5:hover,
@@ -1570,6 +1596,8 @@ bx-hover .bx-fuchsia-3:hover,
     color: #e879f9;
 }
 
+.bx-dark bx-hover .bx-fuchsia:hover,
+.bx-dark .bx-fuchsia.bx-hover:hover,
 .bx-dark bx-hover .bx-fuchsia-4:hover,
 .bx-dark .bx-fuchsia-4.bx-hover:hover,
 .bx-dark .bx-fuchsia-5,
@@ -1590,6 +1618,7 @@ fuchsia,
 .bx-dark bx-hover .bx-fuchsia-3:hover,
 .bx-dark .bx-fuchsia-3.bx-hover:hover,
 .bx-dark .bx-fuchsia-4,
+.bx-dark .bx-fuchsia,
 bx-hover .bx-fuchsia:hover,
 .bx-fuchsia.bx-hover:hover,
 bx-hover .bx-fuchsia-5:hover,
@@ -1700,6 +1729,8 @@ bx-hover .bx-pink-3:hover,
     color: #f472b6;
 }
 
+.bx-dark bx-hover .bx-pink:hover,
+.bx-dark .bx-pink.bx-hover:hover,
 .bx-dark bx-hover .bx-pink-4:hover,
 .bx-dark .bx-pink-4.bx-hover:hover,
 .bx-dark .bx-pink-5,
@@ -1720,6 +1751,7 @@ pink,
 .bx-dark bx-hover .bx-pink-3:hover,
 .bx-dark .bx-pink-3.bx-hover:hover,
 .bx-dark .bx-pink-4,
+.bx-dark .bx-pink,
 bx-hover .bx-pink:hover,
 .bx-pink.bx-hover:hover,
 bx-hover .bx-pink-5:hover,
@@ -1830,6 +1862,8 @@ bx-hover .bx-gray-3:hover,
     color: #9ca3af;
 }
 
+.bx-dark bx-hover .bx-gray:hover,
+.bx-dark .bx-gray.bx-hover:hover,
 .bx-dark bx-hover .bx-gray-4:hover,
 .bx-dark .bx-gray-4.bx-hover:hover,
 .bx-dark .bx-gray-5,
@@ -1850,6 +1884,7 @@ gray,
 .bx-dark bx-hover .bx-gray-3:hover,
 .bx-dark .bx-gray-3.bx-hover:hover,
 .bx-dark .bx-gray-4,
+.bx-dark .bx-gray,
 bx-hover .bx-gray:hover,
 .bx-gray.bx-hover:hover,
 bx-hover .bx-gray-5:hover,
@@ -1911,7 +1946,7 @@ bx-hover .bx-gray-9:hover,
 
 bx-hover .bx-white:hover,
 .bx-white.bx-hover:hover {
-    background-color: whitesmoke;
+    background-color: #f9fafb;
 }
 
 white,
@@ -1921,14 +1956,14 @@ white,
 
 .bx-dark,
 .bx-black {
-    background-color: black;
-    border-color: #030712;
-    color: white;
+    background-color: #181818;
+    border-color: black;
+    color: #CCCCCC;
 }
 
 bx-hover .bx-black:hover,
 .bx-black.bx-hover:hover {
-    background-color: #030712;
+    background-color: #1F1F1F;
 }
 
 black,

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html>
 
 <head>
     <meta charset="UTF-8" />
@@ -29,12 +29,12 @@
 
         bx-float,
         bx-table,
-        bx-float div,
-        bx-table div,
+        bx-float>div,
+        bx-table>div,
         .bx-float,
         .bx-table,
-        .bx-float div,
-        .bx-table div,
+        .bx-float>div,
+        .bx-table>div,
         .bx-relative div {
             padding: 21px;
         }
@@ -51,23 +51,24 @@
             padding: 3px;
         }
 
-        .colors-table tr>td:first-child {
-            /* white-space: nowrap; */
-        }
+        /* .colors-table tr>td:first-child {
+            white-space: nowrap;
+        } */
     </style>
 </head>
 
-<body class="bx-xxl-paper bx-ltr bx-dark">
+<body class="bx-xxl-paper bx-ltr bx-dark0">
     <h1>Barfix Layout & Grid System</h1>
-    <p>Use this simple mobile-first responsive grid to build layouts of your web pages. It's not just a twelve
-        column
-        system, but a 1..10, 12, 16 and 25 column system!</p>
+    <p>Use this simple, mobile-first, responsive grid to build the layouts of your web pages. It’s not just a
+        twelve-column system — it supports 1 to 10, 12, 16, and 25 column grids!</p>
     <h2>
         How it works
     </h2>
-    <p>Barfix's grid system is so simple and easy to learn. It's fully responsive using CSS float. There is a
-        "<blue>bx-float</blue>"
-        class for any container and the rest is all about column widths.
+    <p>
+        The Barfix grid system is simple and easy to learn. It is fully responsive using CSS floats. Any container with
+        the class <blue><code>".bx-float"</code></blue> works as a floatable container, and you set the widths of child
+        elements by applying the
+        appropriate column width classes.
     </p>
 
     <bx-tag>div <red>class</red>=<blue>"bx-float"</blue></bx-tag> or <bx-tag>bx-float</bx-tag>
@@ -97,8 +98,8 @@
     </bx-hover>
 
     <p>
-        <sub class="margin-bottom-20">Hint: "<blue>bx-sm-2-5</blue>" sets width to 2/5 of the screen when it is "small"
-            or greater.</sub>
+        <strong>Hint:</strong> The class <blue><code>".bx-sm-2-5"</code></blue> sets the width of an element to 2/5 of
+        the container when the viewport is at least the "small" breakpoint.
     </p>
 
     <p>Also we have a "<blue>bx-table</blue>"
@@ -126,7 +127,7 @@
     <h2>
         Place it, where ever you want
     </h2>
-    <p>There is also a positioning classes for nine positions of a box. Just be carefull about container's
+    <p>There are also positioning classes for nine different positions of a box. Just be carefull about container's
         width,
         height and position.</p>
 
@@ -167,8 +168,8 @@
     <h2>
         Shape it, how ever you want
     </h2>
-    <p>Preferably for images, it has a ratio system to set the image (or any content) size to a specific aspect
-        ratio. Developed for image layout pages like Instagram.</p>
+    <p>The ratio system allows you to set the size of images (or any content) to specific aspect ratios. This is
+        especially useful for image layout pages, like Instagram.</p>
     <div class="bx-float bx-blue-0 bx-border bx-text-white margin-bottom-20">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
@@ -187,20 +188,11 @@
         </div>
     </div>
 
-    <h2>Color it, like a <strong>
-            <red>c</red>
-            <orange>o</orange>
-            <yellow>l</yellow>
-            <lime>o</lime>
-            <green>r</green>
-            <teal>i</teal>
-            <cyan>s</cyan>
-            <blue>t</blue>
-        </strong></h2>
+    <h2>Color it, like a colorist</h2>
     <bx-border>
         <bx-hover>
             <bx-float>
-                <div class="bx-lg-9-12 bx-xl-7-12">
+                <div class="bx-lg-9-12 bx-xxl-7-12" style="padding: 0;">
                     <table class="colors-table bx-1-1">
                         <tbody>
                             <tr>
@@ -863,11 +855,91 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="5">
+                                    <div class="bx-black" style="padding: 15px;">
+                                        .bx-black
+                                    </div>
+                                </td>
+                                <td colspan="5">
+                                    <div class="bx-white" style="padding: 15px;">
+                                        .bx-white
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="bx-lg-9-12 bx-xl-5-12">
-                    <p>It's so easy</p>
+                <div class="bx-lg-9-12 bx-xxl-5-12">
+                    <p>Inspired by Tailwind color palette, we have 12 main colors, with 10 shades; plus Black and White
+                        (with no shade).
+                    <h3>
+                        How to use
+                    </h3>
+                    <p>
+                        <bx-tag>div <red>class</red>=<blue>"bx-{color}-{shade}"</blue></bx-tag>
+                    </p>
+                    <p>
+                        Shade No.5 is default in light mode, and it's No.4 in dark mode.
+                    </p>
+                    <p>
+                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-red-5"</blue></bx-tag>
+                        <br>
+                        Equal to: <bx-tag>div <red>class</red>=<blue>"bx-red"</blue></bx-tag>
+                    </p>
+                    <h3>
+                        Text color
+                    </h3>
+                    <p>
+                        You can set all colors as text color of an element:
+                    </p>
+                    <p>
+                        <bx-tag>span <red>class</red>=<blue>"bx-text-{color}"</blue></bx-tag> or
+                        <bx-tag>{color}</bx-tag>
+                    </p>
+                    <p>
+                        Such as: <bx-tag>span <red>class</red>=<blue>"bx-text-pink"</blue></bx-tag>
+                        <pink>It's pink</pink><bx-tag>/span</bx-tag>
+                        <br>
+                        Equal to: <bx-tag>pink</bx-tag>
+                        <pink>It's pink</pink><bx-tag>/pink</bx-tag>
+                    </p>
+                    <h3>
+                        Border color?
+                    </h3>
+                    <p>
+                        Yes, just set "<blue>bx-border</blue>" class or use <bx-tag>bx-border</bx-tag> tag to set that
+                        for all inner elements:
+                    </p>
+                    <p>
+                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-lime-2 bx-border"</blue></bx-tag>
+                        <br>
+                        Or: <bx-tag>bx-border</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-lime-2"</blue>
+                        </bx-tag>...<bx-tag>/bx-border</bx-tag>
+                    </p>
+                    <h3>
+                        Hover color?
+                    </h3>
+                    <p>
+                        Yes, just set "<blue>bx-hover</blue>" class or use <bx-tag>bx-hover</bx-tag> tag to set that for
+                        all inner elements:
+                    </p>
+                    <p>
+                        Such as: <bx-tag>div <red>class</red>=<blue>"bx-cyan-6 bx-hover"</blue></bx-tag>
+                        <br>
+                        Or: <bx-tag>bx-hover</bx-tag>...<bx-tag>div <red>class</red>=<blue>"bx-cyan-6"</blue>
+                        </bx-tag>...<bx-tag>/bx-hover</bx-tag>
+                    </p>
+                    <h3>
+                        Dark mode?
+                    </h3>
+                    <p>
+                        Yes, just set "<blue>bx-dark</blue>" class to an outer element:
+                    </p>
+                    <p>
+                        Such as: <bx-tag>body <red>class</red>=<blue>"bx-dark"</blue></bx-tag>
+                    </p>
                 </div>
             </bx-float>
         </bx-hover>
