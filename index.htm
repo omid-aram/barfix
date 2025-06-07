@@ -31,18 +31,6 @@
             font-family: Consolas, "Courier New", monospace;
         }
 
-        bx-float,
-        bx-table,
-        bx-float>div,
-        bx-table>div,
-        .bx-float,
-        .bx-table,
-        .bx-float>div,
-        .bx-table>div,
-        .bx-relative div {
-            padding: 21px;
-        }
-
         p {
             margin-bottom: 15px;
         }
@@ -51,14 +39,13 @@
             margin-bottom: 20px;
         }
 
-        .colors-table td {
+        .bx-table td {
             text-align: center;
         }
 
         .colors-table .bx-ratio-1-1 {
             max-width: 40px;
-            /* width: 40px; */
-            display: inline-block;
+            border-radius: 4px;
         }
 
         ul {
@@ -86,23 +73,23 @@
     <bx-tag>div <red>class</red>=<blue>"bx-float"</blue></bx-tag> or <bx-tag>bx-float</bx-tag>
     <bx-hover>
         <bx-border>
-            <bx-float class="bx-purple-0">
-                <div class="bx-1-9 bx-purple-2 ">
+            <bx-float class="bx-purple-0 bx-padding-2">
+                <div class="bx-1-9 bx-purple-2 bx-padding-4">
                     .bx-1-9
                 </div>
-                <div class="bx-sm-1-7 bx-purple-4">
+                <div class="bx-sm-1-7 bx-purple-4 bx-padding-4">
                     .bx-sm-1-7
                 </div>
-                <div class="bx-md-2-10 bx-purple-6">
+                <div class="bx-md-2-10 bx-purple-6 bx-padding-4">
                     .bx-md-2-10
                 </div>
-                <div class="bx-lg-2-12 bx-purple-8">
+                <div class="bx-lg-2-12 bx-purple-8 bx-padding-4">
                     .bx-lg-2-12
                 </div>
-                <div class="bx-xl-3-16 bx-pink-5">
+                <div class="bx-xl-3-16 bx-pink-5 bx-padding-4">
                     .bx-xl-3-16
                 </div>
-                <div class="bx-xxl-3-25 bx-pink-3">
+                <div class="bx-xxl-3-25 bx-pink-3 bx-padding-4">
                     .bx-xxl-3-25
                 </div>
             </bx-float>
@@ -114,7 +101,7 @@
         the container when the viewport is at least the "small" breakpoint.
     </p>
     <p>
-        There is also a <blue><code>"bx-table"</code></blue> class that makes the container behave like a table row,
+        There is also a <blue><code>"bx-shelf"</code></blue> class that makes the container behave like a table row,
         with children as table cells.
         You can assign relative widths to cells using classes <blue><code>"bx-w-1"</code></blue> to <blue>
             <code>"bx-w-25"</code>
@@ -122,20 +109,20 @@
         (proportion) of each cell relative to its siblings.
     </p>
 
-    <bx-tag>div <red>class</red>=<blue>"bx-table"</blue></bx-tag> or <bx-tag>bx-table</bx-tag>
+    <bx-tag>div <red>class</red>=<blue>"bx-shelf"</blue></bx-tag> or <bx-tag>bx-shelf</bx-tag>
     <bx-hover>
         <bx-border>
-            <bx-table class="bx-cyan-0 margin-bottom-20">
-                <div class="bx-w-1 bx-teal-1">
+            <bx-shelf class="bx-cyan-0 bx-padding-2 margin-bottom-20">
+                <div class="bx-w-1 bx-teal-1 bx-padding-4">
                     .bx-w-1
                 </div>
-                <div class="bx-w-2 bx-green-1">
+                <div class="bx-w-2 bx-green-1 bx-padding-4">
                     .bx-w-2
                 </div>
-                <div class="bx-w-3 bx-lime-1">
+                <div class="bx-w-3 bx-lime-1 bx-padding-4">
                     .bx-w-3
                 </div>
-            </bx-table>
+            </bx-shelf>
         </bx-border>
     </bx-hover>
 
@@ -151,31 +138,31 @@
     <div class="bx-relative bx-yellow-0 margin-bottom-20" style="height: 240px">
         <bx-hover>
             <bx-border>
-                <div class="bx-top-left bx-yellow-1">
+                <div class="bx-top-left bx-yellow-1 bx-padding-4">
                     .bx-top-left
                 </div>
-                <div class="bx-top-center bx-yellow-2">
+                <div class="bx-top-center bx-yellow-2 bx-padding-4">
                     .bx-top-center
                 </div>
-                <div class="bx-top-right bx-yellow-3">
+                <div class="bx-top-right bx-yellow-3 bx-padding-4">
                     .bx-top-right
                 </div>
-                <div class="bx-middle-start bx-orange-1">
+                <div class="bx-middle-start bx-orange-1 bx-padding-4">
                     .bx-middle-start
                 </div>
-                <div class="bx-middle-center bx-orange-2">
+                <div class="bx-middle-center bx-orange-2 bx-padding-4">
                     .bx-middle-center
                 </div>
-                <div class="bx-middle-end bx-orange-3">
+                <div class="bx-middle-end bx-orange-3 bx-padding-4">
                     .bx-middle-end
                 </div>
-                <div class="bx-bottom-left bx-red-1">
+                <div class="bx-bottom-left bx-red-1 bx-padding-4">
                     .bx-bottom-left
                 </div>
-                <div class="bx-bottom-center bx-red-2">
+                <div class="bx-bottom-center bx-red-2 bx-padding-4">
                     .bx-bottom-center
                 </div>
-                <div class="bx-bottom-right bx-red-3">
+                <div class="bx-bottom-right bx-red-3 bx-padding-4">
                     .bx-bottom-right
                 </div>
             </bx-border>
@@ -188,7 +175,7 @@
     <p>Barfix includes a ratio system so you can set the aspect ratio of any element (like images) easily. This is
         especially useful for image layouts similar to Instagram.</p>
 
-    <div class="bx-float bx-blue-0 bx-border bx-text-white margin-bottom-20">
+    <div class="bx-float bx-blue-0 bx-border bx-text-white bx-padding-2 margin-bottom-20">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
             <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
@@ -233,7 +220,7 @@
     <h3>Color Shades Table</h3>
     <bx-border>
         <bx-hover>
-            <table class="colors-table bx-1-1">
+            <table class="bx-table colors-table margin-bottom-20">
                 <thead class="bx-blue">
                     <tr>
                         <th>Color</th>
@@ -904,12 +891,12 @@
                     <tr>
                         <td>b&w</td>
                         <td colspan="5">
-                            <div class="bx-black" style="padding: 12px;">
+                            <div class="bx-black bx-padding-2" style="border-radius: 4px;">
                                 .bx-black
                             </div>
                         </td>
                         <td colspan="5">
-                            <div class="bx-white" style="padding: 12px;">
+                            <div class="bx-white bx-padding-2" style="border-radius: 4px;">
                                 .bx-white
                             </div>
                         </td>
@@ -988,6 +975,273 @@
             </div> -->
         </bx-hover>
     </bx-border>
+
+    <h2>Responsive Breakpoints</h2>
+    <p>Barfix includes six breakpoints (borrowed from Bootstrap) for build responsively.
+
+    <table class="bx-table bx-border margin-bottom-20">
+        <thead class="bx-blue">
+            <tr>
+                <th class="bx-w-1">Breakpoint</th>
+                <th class="bx-w-1">Class infix</th>
+                <th class="bx-w-1">Dimensions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Extra small</td>
+                <td><i>None</i></td>
+                <td>&lt;576px</td>
+            </tr>
+            <tr>
+                <td>Small</td>
+                <td>
+                    <blue>sm</blue>
+                </td>
+                <td>&ge;576px</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>
+                    <blue>md</blue>
+                </td>
+                <td>&ge;768px</td>
+            </tr>
+            <tr>
+                <td>Large</td>
+                <td>
+                    <blue>lg</blue>
+                </td>
+                <td>&ge;992px</td>
+            </tr>
+            <tr>
+                <td>Extra large</td>
+                <td>
+                    <blue>xl</blue>
+                </td>
+                <td>&ge;1200px</td>
+            </tr>
+            <tr>
+                <td>Extra extra large</td>
+                <td>
+                    <blue>xxl</blue>
+                </td>
+                <td>&ge;1400px</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Container</h2>
+    <p>Barfix prefers full-width size for the container. Except on special sizes where the user can choose. We name it, <strong>paper</strong>.</p>
+
+    <bx-hover>
+        <table class="bx-table bx-border margin-bottom-20">
+            <thead class="bx-blue">
+                <tr>
+                    <th class="bx-w-1">Class name</th>
+                    <th class="bx-w-1">xs</th>
+                    <th class="bx-w-1">sm</th>
+                    <th class="bx-w-1">md</th>
+                    <th class="bx-w-1">lg</th>
+                    <th class="bx-w-1">xl</th>
+                    <th class="bx-w-1">xxl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bx-gray-0">
+                    <td><i>None</i></td>
+                    <td colspan="6">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-sm-paper</code></blue>
+                    </td>
+                    <td colspan="1">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                    <td colspan="5">
+                        <cyan>width: </cyan>
+                        <fuchsia>540px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-md-paper</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                    <td colspan="4">
+                        <cyan>width: </cyan>
+                        <fuchsia>720px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-lg-paper</code></blue>
+                    </td>
+                    <td colspan="3">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                    <td colspan="3">
+                        <cyan>width: </cyan>
+                        <fuchsia>960px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-xl-paper</code></blue>
+                    </td>
+                    <td colspan="4">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>width: </cyan>
+                        <fuchsia>1140px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-xxl-paper</code></blue>
+                    </td>
+                    <td colspan="5">
+                        <cyan>width: </cyan>
+                        <fuchsia>100%</fuchsia>
+                    </td>
+                    <td colspan="1">
+                        <cyan>width: </cyan>
+                        <fuchsia>1320px</fuchsia>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </bx-hover>
+
+    <h2>Typography</h2>
+    
+    <h2>Adaptive Padding</h2>
+    <p>Barfix has five adaptive padding classes from <blue><code>"bx-padding-0"</code></blue> to <blue>
+            <code>"bx-padding-5"</code>
+        </blue>. They provide different padding sizes according to the page size.</p>
+
+    <bx-hover>
+        <table class="bx-table bx-border margin-bottom-20">
+            <thead class="bx-blue">
+                <tr>
+                    <th class="bx-w-1">CSS Class</th>
+                    <th class="bx-w-1">xs</th>
+                    <th class="bx-w-1">sm</th>
+                    <th class="bx-w-1">md</th>
+                    <th class="bx-w-1">lg</th>
+                    <th class="bx-w-1">xl</th>
+                    <th class="bx-w-1">xxl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-0</code></blue>
+                    </td>
+                    <td colspan="6">
+                        <cyan>padding: </cyan>
+                        <fuchsia>0px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-1</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>1px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>3px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>5px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-2</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>2px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>6px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>10px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-3</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>3px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>9px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>15px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-4</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>5px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>15px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>20px</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-padding-5</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>7px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>21px</fuchsia>
+                    </td>
+                    <td colspan="2">
+                        <cyan>padding: </cyan>
+                        <fuchsia>30px</fuchsia>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </bx-hover>
 </body>
 
 </html>
