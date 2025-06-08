@@ -2105,10 +2105,6 @@ black,
     overflow: hidden;
 }
 
-.bx-font-x000 {
-    font-size: 0.625rem !important;
-}
-
 .bx-font-x00 {
     font-size: 0.75rem !important;
 }
@@ -2574,10 +2570,6 @@ bx-tag:after {
 @media (max-width: 575px) {
     body {
         font-size: 0.875rem;
-    }
-
-    .bx-font-x000 {
-        font-size: 0.5rem !important;
     }
 
     .bx-font-x00 {
