@@ -21,26 +21,16 @@
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
 
     <style>
-        body {
-            padding: 12px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            font-size: 14px;
-        }
-
         code {
             font-family: Consolas, "Courier New", monospace;
         }
 
-        p {
-            margin-bottom: 15px;
+        .bx-table {
+            direction: ltr;
         }
 
-        .margin-bottom-20 {
-            margin-bottom: 20px;
-        }
-
-        .bx-table td {
-            text-align: center;
+        .bx-table td:first-child {
+            white-space: nowrap;
         }
 
         .colors-table .bx-ratio-1-1 {
@@ -56,7 +46,7 @@
     </style>
 </head>
 
-<body class="bx-xxl-paper bx-ltr bx-dark0">
+<body class="bx-xxl-paper bx-mt-1 bx-ltr bx-dark0">
     <h1>Barfix Layout & Grid System</h1>
     <p>Use this simple, mobile-first, responsive grid to build the layouts of your web pages. It’s not just a
         twelve-column system — it supports 1 to 10, 12, 16, and 25 column grids!</p>
@@ -73,7 +63,7 @@
     <bx-tag>div <red>class</red>=<blue>"bx-float"</blue></bx-tag> or <bx-tag>bx-float</bx-tag>
     <bx-hover>
         <bx-border>
-            <bx-float class="bx-purple-0 bx-padding-2">
+            <bx-float class="bx-purple-0 bx-padding-2 bx-mb-2">
                 <div class="bx-1-9 bx-purple-2 bx-padding-4">
                     .bx-1-9
                 </div>
@@ -112,7 +102,7 @@
     <bx-tag>div <red>class</red>=<blue>"bx-shelf"</blue></bx-tag> or <bx-tag>bx-shelf</bx-tag>
     <bx-hover>
         <bx-border>
-            <bx-shelf class="bx-cyan-0 bx-padding-2 margin-bottom-20">
+            <bx-shelf class="bx-cyan-0 bx-padding-2 bx-mb-2">
                 <div class="bx-w-1 bx-teal-1 bx-padding-4">
                     .bx-w-1
                 </div>
@@ -135,7 +125,7 @@
         </blue>.
     </p>
 
-    <div class="bx-relative bx-yellow-0 margin-bottom-20" style="height: 240px">
+    <div class="bx-relative bx-yellow-0 bx-mb-2" style="height: 240px">
         <bx-hover>
             <bx-border>
                 <div class="bx-top-left bx-yellow-1 bx-padding-4">
@@ -175,7 +165,7 @@
     <p>Barfix includes a ratio system so you can set the aspect ratio of any element (like images) easily. This is
         especially useful for image layouts similar to Instagram.</p>
 
-    <div class="bx-float bx-blue-0 bx-border bx-text-white bx-padding-2 margin-bottom-20">
+    <div class="bx-float bx-blue-0 bx-border bx-text-white bx-padding-2 bx-mb-2">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
             <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
@@ -220,7 +210,7 @@
     <h3>Color Shades Table</h3>
     <bx-border>
         <bx-hover>
-            <table class="bx-table colors-table margin-bottom-20">
+            <table class="bx-table colors-table bx-mb-2">
                 <thead class="bx-blue">
                     <tr>
                         <th>Color</th>
@@ -977,68 +967,72 @@
     </bx-border>
 
     <h2>Responsive Breakpoints</h2>
-    <p>Barfix includes six breakpoints (borrowed from Bootstrap) for build responsively.
-
-    <table class="bx-table bx-border margin-bottom-20">
-        <thead class="bx-blue">
-            <tr>
-                <th class="bx-w-1">Breakpoint</th>
-                <th class="bx-w-1">Class infix</th>
-                <th class="bx-w-1">Dimensions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Extra small</td>
-                <td><i>None</i></td>
-                <td>&lt;576px</td>
-            </tr>
-            <tr>
-                <td>Small</td>
-                <td>
-                    <blue>sm</blue>
-                </td>
-                <td>&ge;576px</td>
-            </tr>
-            <tr>
-                <td>Medium</td>
-                <td>
-                    <blue>md</blue>
-                </td>
-                <td>&ge;768px</td>
-            </tr>
-            <tr>
-                <td>Large</td>
-                <td>
-                    <blue>lg</blue>
-                </td>
-                <td>&ge;992px</td>
-            </tr>
-            <tr>
-                <td>Extra large</td>
-                <td>
-                    <blue>xl</blue>
-                </td>
-                <td>&ge;1200px</td>
-            </tr>
-            <tr>
-                <td>Extra extra large</td>
-                <td>
-                    <blue>xxl</blue>
-                </td>
-                <td>&ge;1400px</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Container</h2>
-    <p>Barfix prefers full-width size for the container. Except on special sizes where the user can choose. We name it, <strong>paper</strong>.</p>
+    <p>Barfix includes six breakpoints (borrowed from Bootstrap) for build responsively.</p>
 
     <bx-hover>
-        <table class="bx-table bx-border margin-bottom-20">
+        <table class="bx-table bx-border bx-mb-2">
             <thead class="bx-blue">
                 <tr>
-                    <th class="bx-w-1">Class name</th>
+                    <th>Breakpoint</th>
+                    <th>Class infix</th>
+                    <th>Dimensions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bx-gray-0">
+                    <td>Extra small</td>
+                    <td><i>None</i></td>
+                    <td>&lt;576px</td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>Small</td>
+                    <td>
+                        <blue>sm</blue>
+                    </td>
+                    <td>&ge;576px</td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>Medium</td>
+                    <td>
+                        <blue>md</blue>
+                    </td>
+                    <td>&ge;768px</td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>Large</td>
+                    <td>
+                        <blue>lg</blue>
+                    </td>
+                    <td>&ge;992px</td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>Extra large</td>
+                    <td>
+                        <blue>xl</blue>
+                    </td>
+                    <td>&ge;1200px</td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>Extra extra large</td>
+                    <td>
+                        <blue>xxl</blue>
+                    </td>
+                    <td>&ge;1400px</td>
+                </tr>
+            </tbody>
+        </table>
+    </bx-hover>
+
+    <h2>Container</h2>
+    <p>Barfix prefers full-width size for the container. Except on special sizes where the user can choose. We name it,
+        <strong>paper</strong>.
+    </p>
+
+    <bx-hover>
+        <table class="bx-table bx-border bx-mb-2">
+            <thead class="bx-blue">
+                <tr>
+                    <th class="bx-w-1">Class</th>
                     <th class="bx-w-1">xs</th>
                     <th class="bx-w-1">sm</th>
                     <th class="bx-w-1">md</th>
@@ -1049,7 +1043,9 @@
             </thead>
             <tbody>
                 <tr class="bx-gray-0">
-                    <td><i>None</i></td>
+                    <td>
+                        <blue><code>.bx-paper</code></blue>
+                    </td>
                     <td colspan="6">
                         <cyan>width: </cyan>
                         <fuchsia>100%</fuchsia>
@@ -1125,17 +1121,115 @@
     </bx-hover>
 
     <h2>Typography</h2>
-    
+    <p>Barfix has some text alignment classes and there is also some font size classes.</p>
+
+    </bx-hover>
+    <table class="bx-table bx-border">
+        <thead class="bx-blue">
+            <tr>
+                <th>Class</th>
+                <th>Style</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-start</code></blue>
+                </td>
+                <td class="bx-text-start">
+                    Start aligned text on all viewport sizes.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-left</code></blue>
+                </td>
+                <td class="bx-text-left">
+                    Left aligned text on all viewport sizes.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-center</code></blue>
+                </td>
+                <td class="bx-text-center">
+                    Center aligned text on all viewport sizes.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-right</code></blue>
+                </td>
+                <td class="bx-text-right">
+                    Right aligned text on all viewport sizes.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-end</code></blue>
+                </td>
+                <td class="bx-text-end">
+                    End aligned text on all viewport sizes.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-bold</code></blue>
+                </td>
+                <td class="bx-text-bold">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-justify</code></blue>
+                </td>
+                <td class="bx-text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-nowrap</code></blue>
+                </td>
+                <td>
+                    <div class="bx-text-nowrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </td>
+            </tr>
+            <tr class="bx-gray-0">
+                <td>
+                    <blue><code>.bx-text-ellipsis</code></blue>
+                </td>
+                <td>
+                    <div class="bx-text-ellipsis">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </bx-hover>
+
     <h2>Adaptive Padding</h2>
     <p>Barfix has five adaptive padding classes from <blue><code>"bx-padding-0"</code></blue> to <blue>
             <code>"bx-padding-5"</code>
         </blue>. They provide different padding sizes according to the page size.</p>
 
     <bx-hover>
-        <table class="bx-table bx-border margin-bottom-20">
+        <table class="bx-table bx-border bx-mb-2">
             <thead class="bx-blue">
                 <tr>
-                    <th class="bx-w-1">CSS Class</th>
+                    <th class="bx-w-1">Class</th>
                     <th class="bx-w-1">xs</th>
                     <th class="bx-w-1">sm</th>
                     <th class="bx-w-1">md</th>
@@ -1242,6 +1336,118 @@
             </tbody>
         </table>
     </bx-hover>
+
+
+    <h2>Margin Helpers</h2>
+    <p>Barfix has a few (but handy) helpers to set margin.</p>
+
+    <bx-hover>
+        <div class="bx-float">
+            <div class="bx-md-1-3 bx-mb-2">
+                <table class="bx-table bx-border">
+                    <thead class="bx-blue">
+                        <tr>
+                            <th class="bx-1-3">Class</th>
+                            <th class="bx-2-3">Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-margin-0</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin:</cyan>&nbsp;<fuchsia>0px</fuchsia>
+                            </td>
+                        </tr>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mb-inner</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-bottom:</cyan>&nbsp;<fuchsia>1rem</fuchsia>
+                                <div class="bx-font-x0">For all first-level children</div>
+                                <div class="bx-font-x0">Except the last-child</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bx-md-1-3 bx-mb-2">
+                <table class="bx-table bx-border">
+                    <thead class="bx-blue">
+                        <tr>
+                            <th class="bx-1-3">Class</th>
+                            <th class="bx-2-3">Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mb-1</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-bottom:</cyan>&nbsp;<fuchsia>1rem</fuchsia>
+                            </td>
+                        </tr>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mb-2</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-bottom:</cyan>&nbsp;<fuchsia>1.5rem</fuchsia>
+                            </td>
+                        </tr>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mb-3</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-bottom:</cyan>&nbsp;<fuchsia>2rem</fuchsia>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bx-md-1-3 bx-mb-2">
+                <table class="bx-table bx-border">
+                    <thead class="bx-blue">
+                        <tr>
+                            <th class="bx-1-3">Class</th>
+                            <th class="bx-2-3">Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mt-1</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-top:</cyan>&nbsp;<fuchsia>1rem</fuchsia>
+                            </td>
+                        </tr>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mt-2</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-top:</cyan>&nbsp;<fuchsia>1.5rem</fuchsia>
+                            </td>
+                        </tr>
+                        <tr class="bx-gray-0">
+                            <td>
+                                <blue><code>.bx-mt-3</code></blue>
+                            </td>
+                            <td>
+                                <cyan>margin-top:</cyan>&nbsp;<fuchsia>2rem</fuchsia>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </bx-hover>
+
 </body>
 
 </html>
