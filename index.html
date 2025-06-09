@@ -23,6 +23,7 @@
     <style>
         code {
             font-family: Consolas, "Courier New", monospace;
+            white-space: nowrap;
         }
 
         .bx-table {
@@ -37,16 +38,10 @@
             max-width: 40px;
             border-radius: 4px;
         }
-
-        ul {
-            margin-top: 0;
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
     </style>
 </head>
 
-<body class="bx-xxl-paper bx-mt-1 bx-ltr bx-dark0">
+<body class="bx-xxl-paper bx-mt-1 bx-ltr0 bx-dark0">
     <h1>Barfix Layout & Grid System</h1>
     <p>Use this simple, mobile-first, responsive grid to build the layouts of your web pages. It’s not just a
         twelve-column system — it supports 1 to 10, 12, 16, and 25 column grids!</p>
@@ -170,7 +165,7 @@
             <img src="image.jpg" />
             <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
         </div>
-        <div class="bx-1-4 bx-ratio-3-4" style="background-image: url('image.jpg'); background-size: cover;">
+        <div class="bx-1-4 bx-ratio-3-4 bx-round-2" style="background-image: url('image.jpg');">
             <span class="bx-bottom-left">.bx-ratio-3-4 (Using Background)</span>
         </div>
         <div class="bx-1-4 bx-ratio-9-16">
@@ -198,11 +193,11 @@
             <code><bx-tag>blue</bx-tag></code>.
         </li>
         <li>Add borders using the <blue><code>"bx-border"</code></blue> class or use
-            <code><bx-tag>bx-border</bx-tag></code> tag to set that for
+            <code><bx-tag>bx-border</bx-tag></code> tag to set border for
             all inner elements.
         </li>
         <li>Enable hover color effects with <blue><code>"bx-hover"</code></blue> class or use
-            <code><bx-tag>bx-hover</bx-tag></code> tag to set that for
+            <code><bx-tag>bx-hover</bx-tag></code> tag to set hover for
             all inner elements.
         </li>
         <li>Activate dark mode by adding <blue><code>"bx-dark"</code></blue> to a parent element.</li>
@@ -1280,7 +1275,7 @@
     </bx-hover>
 
     <h2>Adaptive Padding</h2>
-    <p>Barfix has five adaptive padding classes from <blue><code>"bx-padding-0"</code></blue> to <blue>
+    <p>Barfix has six adaptive padding classes from <blue><code>"bx-padding-0"</code></blue> to <blue>
             <code>"bx-padding-5"</code>
         </blue>. They provide different padding sizes according to the page size.</p>
 
@@ -1507,6 +1502,274 @@
         </div>
     </bx-hover>
 
+    <h2>Visibility</h2>
+    <p>Barfix prefers full-width size for the container. Except on special sizes where the user can choose. We name it,
+        <strong>paper</strong>.
+    </p>
+    <div>
+        <p>Current screen:
+            <red class="bx-xs">Extra Small (xs)</red>
+            <orange class="bx-sm">Small (sm)</orange>
+            <green class="bx-md">Medium (md)</green>
+            <cyan class="bx-lg">Large (lg)</cyan>
+            <blue class="bx-xl">Extra Large (xl)</blue>
+            <fuchsia class="bx-xxl">Extra Extra Large (xxl)</fuchsia>
+        </p>
+    </div>
+
+    <bx-hover>
+        <table class="bx-table bx-border">
+            <thead class="bx-blue">
+                <tr>
+                    <th class="bx-w-1">Class</th>
+                    <th class="bx-w-1">xs</th>
+                    <th class="bx-w-1">sm</th>
+                    <th class="bx-w-1">md</th>
+                    <th class="bx-w-1">lg</th>
+                    <th class="bx-w-1">xl</th>
+                    <th class="bx-w-1">xxl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-hidden</code></blue>
+                    </td>
+                    <td colspan="6">
+                        <red>Invisible for all sizes.</red>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-xs</code></blue>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                    <td colspan="5">
+                        <cyan>Conditional*</cyan>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-sm</code></blue>
+                    </td>
+                    <td colspan="1">
+                        <red>Invisible</red>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                    <td colspan="4">
+                        <cyan>Conditional*</cyan>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-md</code></blue>
+                    </td>
+                    <td colspan="2">
+                        <red>Invisible</red>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                    <td colspan="3">
+                        <cyan>Conditional*</cyan>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-lg</code></blue>
+                    </td>
+                    <td colspan="3">
+                        <red>Invisible</red>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                    <td colspan="2">
+                        <cyan>Conditional*</cyan>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-xl</code></blue>
+                    </td>
+                    <td colspan="4">
+                        <red>Invisible</red>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                    <td colspan="1">
+                        <cyan>Conditional*</cyan>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-xxl</code></blue>
+                    </td>
+                    <td colspan="5">
+                        <red>Invisible</red>
+                    </td>
+                    <td>
+                        <green>Visible</green>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </bx-hover>
+    <p><strong>*Conditional:</strong> Visible, if there is no other visibility classes as its siblings.</p>
+
+    <h2>Rounded Border</h2>
+    <p>Barfix has six round classes from "<blue><code>.bx-round-0</code></blue>" to "<blue><code>.bx-round-5</code>
+        </blue>" to set the border-radius.
+    </p>
+    <bx-hover>
+        <bx-border>
+            <div class="bx-float bx-mb-2">
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-lime-2 bx-round-0">
+                        <code>.bx-round-0</code>
+                        <div class="bx-font-x0">
+                            <lime>border-radius: 0</lime>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-green-2 bx-round-1">
+                        <code>.bx-round-1</code>
+                        <div class="bx-font-x0">
+                            <green>border-radius: 0.25rem</green>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-teal-2 bx-round-2">
+                        <code>.bx-round-2</code>
+                        <div class="bx-font-x0">
+                            <teal>border-radius: 0.5rem</teal>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-cyan-2 bx-round-3">
+                        <code>.bx-round-3</code>
+                        <div class="bx-font-x0">
+                            <cyan>border-radius: 1rem</cyan>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-blue-2 bx-round-4">
+                        <code>.bx-round-4</code>
+                        <div class="bx-font-x0">
+                            <blue>border-radius: 1rem</blue>
+                        </div>
+                    </div>
+                </div>
+                <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
+                    <div class="bx-purple-2 bx-round-5">
+                        <code>.bx-round-5</code>
+                        <div class="bx-font-x0">
+                            <purple>border-radius: 2.5rem</purple>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </bx-border>
+    </bx-hover>
+
+    <h2>Button</h2>
+    <p>Barfix has six round classes from "<blue><code>.bx-round-0</code></blue>" to "<blue><code>.bx-round-5</code>
+        </blue>" to form the borders, plus "<blue><code>.bx-circle</code></blue>" to shape the element like a circle.
+    </p>
+    <div class="bx-mb-2">
+        <table class="bx-table bx-border">
+            <thead class="bx-blue">
+                <tr>
+                    <th>Sample</th>
+                    <th class="bx-1-1">Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button class="bx-btn">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-glass bx-text-red">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-glass</code> <code>.bx-text-red</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-red-2 bx-round-2">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-red-2</code> <code>.bx-round-2</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-red bx-round-3">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-red</code> <code>.bx-round-3</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-orange bx-round-5">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-orange</code> <code>.bx-round-5</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-yellow bx-round-5 bx-padding-2">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-yellow</code> <code>.bx-round-5</code> <code>.bx-padding-2</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-lime-3 bx-hover">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-lime-3</code> <code>.bx-hover</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-green-3 bx-hover-red">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-green-3</code> <code>.bx-hover-red</code></blue>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="bx-btn bx-glass bx-text-red bx-border-0 bx-hover-red-1">Button</button>
+                    </td>
+                    <td>
+                        <blue><code>.bx-btn</code> <code>.bx-glass</code> <code>.bx-text-red</code> <code>.bx-border-0</code> <code>.bx-hover-red-1</code></blue>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
