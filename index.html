@@ -160,12 +160,12 @@
     <p>Barfix includes a ratio system so you can set the aspect ratio of any element (like images) easily. This is
         especially useful for image layouts similar to Instagram.</p>
 
-    <div class="bx-float bx-blue-0 bx-border bx-text-white bx-padding-2 bx-mb-2">
+    <div class="bx-float bx-blue-0 bx-border bx-hover bx-text-white bx-padding-2 bx-mb-2">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
             <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
         </div>
-        <div class="bx-1-4 bx-ratio-3-4 bx-round-2" style="background-image: url('image.jpg');">
+        <div class="bx-1-4 bx-ratio-3-4" style="background-image: url('image.jpg');">
             <span class="bx-bottom-left">.bx-ratio-3-4 (Using Background)</span>
         </div>
         <div class="bx-1-4 bx-ratio-9-16">
@@ -1118,160 +1118,166 @@
     <h2>Typography</h2>
     <p>Barfix has some text alignment classes and there is also some font size classes.</p>
 
-    </bx-hover>
-    <table class="bx-table bx-border bx-mb-2">
-        <thead class="bx-blue">
-            <tr>
-                <th>Class</th>
-                <th>Style</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-start</code></blue>
-                </td>
-                <td class="bx-text-start">
-                    Start aligned text on all viewport sizes.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-left</code></blue>
-                </td>
-                <td class="bx-text-left">
-                    Left aligned text on all viewport sizes.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-center</code></blue>
-                </td>
-                <td class="bx-text-center">
-                    Center aligned text on all viewport sizes.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-right</code></blue>
-                </td>
-                <td class="bx-text-right">
-                    Right aligned text on all viewport sizes.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-end</code></blue>
-                </td>
-                <td class="bx-text-end">
-                    End aligned text on all viewport sizes.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-bold</code></blue>
-                </td>
-                <td class="bx-text-bold">
-                    This is bold.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-justify</code></blue>
-                </td>
-                <td class="bx-text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-ellipsis</code></blue>
-                </td>
-                <td>
-                    <div class="bx-shelf">
-                        <span class="bx-text-ellipsis">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </span>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-text-nowrap</code></blue>
-                </td>
-                <td>
-                    <div class="bx-shelf">
-                        <span class="bx-text-nowrap" style="overflow: auto;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </span>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x00</code></blue>
-                </td>
-                <td class="bx-font-x00">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>0.75rem</fuchsia>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x0</code></blue>
-                </td>
-                <td class="bx-font-x0">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>0.875rem</fuchsia>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x1</code></blue>
-                </td>
-                <td class="bx-font-x1">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>1rem</fuchsia>
-                    --in extra small (xs) screens, the sizes will be one level smaller.
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x2</code></blue>
-                </td>
-                <td class="bx-font-x2">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>1.25rem</fuchsia>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x3</code></blue>
-                </td>
-                <td class="bx-font-x3">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>~1.5rem</fuchsia>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x4</code></blue>
-                </td>
-                <td class="bx-font-x4">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>~1.75rem</fuchsia>
-                </td>
-            </tr>
-            <tr class="bx-gray-0">
-                <td>
-                    <blue><code>.bx-font-x5</code></blue>
-                </td>
-                <td class="bx-font-x5">
-                    <cyan>font-size:</cyan>&nbsp;<fuchsia>~2rem</fuchsia>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <bx-hover>
+        <table class="bx-table bx-border bx-mb-2">
+            <thead class="bx-blue">
+                <tr>
+                    <th>Class</th>
+                    <th>Style</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-start</code></blue>
+                    </td>
+                    <td class="bx-text-start">
+                        Start aligned text on all viewport sizes.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-left</code></blue>
+                    </td>
+                    <td class="bx-text-left">
+                        Left aligned text on all viewport sizes.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-center</code></blue>
+                    </td>
+                    <td class="bx-text-center">
+                        Center aligned text on all viewport sizes.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-right</code></blue>
+                    </td>
+                    <td class="bx-text-right">
+                        Right aligned text on all viewport sizes.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-end</code></blue>
+                    </td>
+                    <td class="bx-text-end">
+                        End aligned text on all viewport sizes.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-bold</code></blue>
+                    </td>
+                    <td class="bx-text-bold">
+                        This is bold.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-justify</code></blue>
+                    </td>
+                    <td class="bx-text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-ellipsis</code></blue>
+                    </td>
+                    <td>
+                        <div class="bx-shelf">
+                            <span class="bx-text-ellipsis">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-text-nowrap</code></blue>
+                    </td>
+                    <td>
+                        <div class="bx-shelf">
+                            <span class="bx-text-nowrap" style="overflow: auto;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x00</code></blue>
+                    </td>
+                    <td class="bx-font-x00">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>0.75rem</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x0</code></blue>
+                    </td>
+                    <td class="bx-font-x0">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>0.875rem</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x1</code></blue>
+                    </td>
+                    <td class="bx-font-x1">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>1rem</fuchsia>
+                        --in extra small (xs) screens, the sizes will be one level smaller.
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x2</code></blue>
+                    </td>
+                    <td class="bx-font-x2">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>1.25rem</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x3</code></blue>
+                    </td>
+                    <td class="bx-font-x3">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>~1.5rem</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x4</code></blue>
+                    </td>
+                    <td class="bx-font-x4">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>~1.75rem</fuchsia>
+                    </td>
+                </tr>
+                <tr class="bx-gray-0">
+                    <td>
+                        <blue><code>.bx-font-x5</code></blue>
+                    </td>
+                    <td class="bx-font-x5">
+                        <cyan>font-size:</cyan>&nbsp;<fuchsia>~2rem</fuchsia>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </bx-hover>
 
     <h2>Adaptive Padding</h2>
@@ -1508,12 +1514,12 @@
     </p>
     <div>
         <p>Current screen:
-            <red class="bx-xs">Extra Small (xs)</red>
-            <orange class="bx-sm">Small (sm)</orange>
-            <green class="bx-md">Medium (md)</green>
-            <cyan class="bx-lg">Large (lg)</cyan>
-            <blue class="bx-xl">Extra Large (xl)</blue>
-            <fuchsia class="bx-xxl">Extra Extra Large (xxl)</fuchsia>
+            <red class="bx-xs bx-font-x0">Extra Small (xs)</red>
+            <orange class="bx-sm bx-font-x1">Small (sm)</orange>
+            <green class="bx-md bx-font-x2">Medium (md)</green>
+            <cyan class="bx-lg bx-font-x3">Large (lg)</cyan>
+            <blue class="bx-xl bx-font-x4">Extra Large (xl)</blue>
+            <fuchsia class="bx-xxl bx-font-x5">Extra Extra Large (xxl)</fuchsia>
         </p>
     </div>
 
@@ -1740,7 +1746,8 @@
                         <button class="bx-btn bx-yellow bx-round-5 bx-padding-2">Button</button>
                     </td>
                     <td>
-                        <blue><code>.bx-btn</code> <code>.bx-yellow</code> <code>.bx-round-5</code> <code>.bx-padding-2</code></blue>
+                        <blue><code>.bx-btn</code> <code>.bx-yellow</code> <code>.bx-round-5</code>
+                            <code>.bx-padding-2</code></blue>
                     </td>
                 </tr>
                 <tr>
@@ -1761,10 +1768,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="bx-btn bx-text-red bx-border-0 bx-hover-red-1">Button</button>
+                        <button
+                            class="bx-btn bx-round-4 bx-text-purple bx-text-bold bx-font-x0 bx-border-0 bx-hover-purple-0">Button</button>
                     </td>
                     <td>
-                        <blue><code>.bx-btn</code> <code>.bx-text-red</code> <code>.bx-border-0</code> <code>.bx-hover-red-1</code></blue>
+                        <blue>.bx-btn .bx-round-4 .bx-text-purple .bx-text-bold .bx-font-x0 .bx-border-0
+                            .bx-hover-purple-0</blue>
                     </td>
                 </tr>
             </tbody>
