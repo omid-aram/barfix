@@ -160,7 +160,7 @@
     <p>Barfix includes a ratio system so you can set the aspect ratio of any element (like images) easily. This is
         especially useful for image layouts similar to Instagram.</p>
 
-    <div class="bx-float bx-blue-0 bx-border bx-hover bx-text-white bx-padding-2 bx-mb-2">
+    <div class="bx-float bx-blue-0 bx-border bx-text-white bx-padding-2 bx-mb-2">
         <div class="bx-1-4 bx-ratio-1-1">
             <img src="image.jpg" />
             <span class="bx-bottom-left">.bx-ratio-1-1 (Using Image)</span>
@@ -205,7 +205,7 @@
     <h3>Color Shades Table</h3>
     <bx-border>
         <bx-hover>
-            <table class="bx-table colors-table bx-mb-2">
+            <table class="bx-table colors-table bx-mb-2 bx-shadow">
                 <thead class="bx-blue-6">
                     <tr>
                         <th>Color</th>
@@ -1281,7 +1281,7 @@
     </bx-hover>
 
     <h2>Adaptive Padding</h2>
-    <p>Barfix has six adaptive padding classes from <blue><code>"bx-padding-0"</code></blue> to <blue>
+    <p>Barfix has six adaptive padding classes from <blue><code>"bx-no-padding"</code></blue> to <blue>
             <code>"bx-padding-5"</code>
         </blue>. They provide different padding sizes according to the page size.</p>
 
@@ -1301,7 +1301,7 @@
             <tbody>
                 <tr class="bx-gray-0">
                     <td>
-                        <blue><code>.bx-padding-0</code></blue>
+                        <blue><code>.bx-no-padding</code></blue>
                     </td>
                     <td colspan="6">
                         <cyan>padding: </cyan>
@@ -1414,7 +1414,7 @@
                     <tbody>
                         <tr class="bx-gray-0">
                             <td>
-                                <blue><code>.bx-margin-0</code></blue>
+                                <blue><code>.bx-no-margin</code></blue>
                             </td>
                             <td>
                                 <cyan>margin:</cyan>&nbsp;<fuchsia>0px</fuchsia>
@@ -1629,15 +1629,16 @@
     <p><strong>*Conditional:</strong> Visible, if there is no other visibility classes as its siblings.</p>
 
     <h2>Rounded Border</h2>
-    <p>Barfix has six round classes from "<blue><code>.bx-round-0</code></blue>" to "<blue><code>.bx-round-5</code>
+    <p>Barfix has six round classes from "<blue><code>.bx-no-round</code></blue>", "<blue>.bx-round-1</blue>" to "<blue>
+            <code>.bx-round-5</code>
         </blue>" to set the border-radius.
     </p>
     <bx-hover>
         <bx-border>
             <div class="bx-float bx-mb-2">
                 <div class="bx-1-2 bx-sm-1-3 bx-lg-1-6 bx-padding-2">
-                    <div class="bx-lime-2 bx-round-0">
-                        <code>.bx-round-0</code>
+                    <div class="bx-lime-2 bx-no-round">
+                        <code>.bx-no-round</code>
                         <div class="bx-font-x0">
                             <lime>border-radius: 0</lime>
                         </div>
@@ -1689,7 +1690,7 @@
     </bx-hover>
 
     <h2>Button</h2>
-    <p>Barfix has six round classes from "<blue><code>.bx-round-0</code></blue>" to "<blue><code>.bx-round-5</code>
+    <p>Barfix has six round classes from "<blue><code>.bx-no-round</code></blue>" to "<blue><code>.bx-round-5</code>
         </blue>" to form the borders, plus "<blue><code>.bx-circle</code></blue>" to shape the element like a circle.
     </p>
     <div class="bx-mb-2">
@@ -1747,15 +1748,16 @@
                     </td>
                     <td>
                         <blue><code>.bx-btn</code> <code>.bx-yellow</code> <code>.bx-round-5</code>
-                            <code>.bx-padding-2</code></blue>
+                            <code>.bx-padding-2</code>
+                        </blue>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button class="bx-btn bx-lime-3 bx-hover">Button</button>
+                        <button class="bx-btn bx-lime-3 bx-hover bx-no-shadow">Button</button>
                     </td>
                     <td>
-                        <blue><code>.bx-btn</code> <code>.bx-lime-3</code> <code>.bx-hover</code></blue>
+                        <blue><code>.bx-btn</code> <code>.bx-lime-3</code> <code>.bx-hover</code> .bx-no-shadow</blue>
                     </td>
                 </tr>
                 <tr>
@@ -1769,11 +1771,11 @@
                 <tr>
                     <td>
                         <button
-                            class="bx-btn bx-round-4 bx-text-purple bx-text-bold bx-font-x0 bx-border-0 bx-hover-purple-0 bx-hover-text-purple">Button</button>
+                            class="bx-btn bx-round-4 bx-text-purple bx-text-bold bx-no-border bx-hover-purple-0 bx-hover-text-purple">Button</button>
                     </td>
                     <td>
-                        <blue>.bx-btn .bx-round-4 .bx-text-purple .bx-text-bold .bx-font-x0 .bx-border-0
-                            .bx-hover-purple-0</blue>
+                        <blue>bx-btn bx-round-4 bx-text-purple bx-text-bold bx-no-border bx-hover-purple-0
+                            bx-hover-text-purple</blue>
                     </td>
                 </tr>
             </tbody>
