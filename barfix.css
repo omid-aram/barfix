@@ -643,6 +643,55 @@ bx-tag:after {
     content: '>';
 }
 
+/* Inputs */
+.bx-input,
+.bx-textarea,
+.bx-select {
+    padding: 0.5rem;
+    border: 1px solid var(--bx-gray-3);
+    border-radius: 4px;
+    background-color: var(--bx-body-back);
+    color: var(--bx-body-text);
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bx-input:focus,
+.bx-textarea:focus,
+.bx-select:focus {
+    outline: none;
+    border-color: var(--bx-blue-5);
+    /* box-shadow: 0 0 0 2px var(--bx-blue-1); */
+    box-shadow: var(--bx-box-shadow);
+    -webkit-box-shadow: var(--bx-box-shadow);
+}
+
+/* Textarea */
+.bx-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Label */
+.bx-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+/* Form Group */
+.bx-form-group {
+    margin-bottom: 1rem;
+}
+
+/* Checkbox & Radio (unstyled, but spacers) */
+.bx-checkbox,
+.bx-radio {
+    margin-right: 0.5rem;
+}
+
 .bx-spacer {
     width: 1px;
     height: 1px;
@@ -4563,7 +4612,7 @@ bx-hover .bx-black:hover,
     --bx-color-black: black;
     --bx-color-dark-black: #202124;
     /* --bx-color-light-white: #dee2e6; */
-    --bx-color-light-white: #e3e3e3;
+    --bx-color-dark-white: #e3e3e3;
     --bx-color-white: white;
 
     --bx-light-box-shadow: 0px 0px .5rem 0 rgba(64, 64, 64, .4);
@@ -5286,7 +5335,7 @@ bx-hover .bx-black:hover,
     :root {
         /* Dark mode colors */
         --bx-body-back: var(--bx-color-dark-black);
-        --bx-body-text: var(--bx-color-light-white);
+        --bx-body-text: var(--bx-color-dark-white);
 
         --bx-box-shadow: var(--bx-dark-box-shadow);
 
@@ -5666,19 +5715,19 @@ bx-hover .bx-black:hover,
 
         --bx-gray-0: var(--bx-color-gray-10);
         --bx-gray-0-b: var(--bx-color-gray-10-b);
-        --bx-gray-0-t: var(--bx-color-light-white);
+        --bx-gray-0-t: var(--bx-color-dark-white);
         --bx-gray-1: var(--bx-color-gray-9);
         --bx-gray-1-b: var(--bx-color-gray-9-b);
-        --bx-gray-1-t: var(--bx-color-light-white);
+        --bx-gray-1-t: var(--bx-color-dark-white);
         --bx-gray-2: var(--bx-color-gray-8);
         --bx-gray-2-b: var(--bx-color-gray-8-b);
-        --bx-gray-2-t: var(--bx-color-light-white);
+        --bx-gray-2-t: var(--bx-color-dark-white);
         --bx-gray-3: var(--bx-color-gray-7);
         --bx-gray-3-b: var(--bx-color-gray-7-b);
-        --bx-gray-3-t: var(--bx-color-light-white);
+        --bx-gray-3-t: var(--bx-color-dark-white);
         --bx-gray-4: var(--bx-color-gray-6);
         --bx-gray-4-b: var(--bx-color-gray-6-b);
-        --bx-gray-4-t: var(--bx-color-light-white);
+        --bx-gray-4-t: var(--bx-color-dark-white);
         --bx-gray-5: var(--bx-color-gray-5);
         --bx-gray-5-b: var(--bx-color-gray-5-b);
         --bx-gray-5-t: var(--bx-color-dark-black);
@@ -5702,7 +5751,7 @@ bx-hover .bx-black:hover,
 
 [data-bx-theme="dark"] {
     --bx-body-back: var(--bx-color-dark-black);
-    --bx-body-text: var(--bx-color-light-white);
+    --bx-body-text: var(--bx-color-dark-white);
 
     --bx-box-shadow: var(--bx-dark-box-shadow);
 
